@@ -1,0 +1,28 @@
+set relativenumber number
+
+" set <leader> to <space>
+let mapleader = " "
+
+" edit ideavim config
+nnoremap <leader>vv :e ~/.ideavimrc<CR>
+noremap <leader>vr :source ~/.ideavimrc<CR>
+
+" running & debugging
+nnoremap <leader>ru :action Run<CR>
+nnoremap <leader>de :action Debug<CR>
+nnoremap <leader>sp :action Stop \| action HideActiveWindow <CR>
+
+" window configs
+nnoremap <leader>x :action CloseEditor<CR>
+nnoremap <leader>h :action HideActiveWindow <CR>
+nnoremap <Tab> :action NextTab<CR>
+nnoremap <S-Tab> :action PreviousTab<CR>
+
+" searching
+nnoremap <leader>ff :action GotoFile<CR>
+
+" code formatting
+nnoremap <leader>fm :action ReformatCode \| action OptimizeImports<CR>
+
+" utils
+nnoremap <leader>/ :action CommentByLineComment<CR>
