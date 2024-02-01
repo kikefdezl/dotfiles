@@ -1,5 +1,8 @@
 set relativenumber number
 
+" yank to clipboard
+set clipboard+=unnamed 
+
 " set <leader> to <space>
 let mapleader = " "
 
