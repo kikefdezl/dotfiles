@@ -10,5 +10,4 @@ git clone git@github.com:kikefdezl/dotfiles.git
 Installs:
 
 - `.zshrc`
-- Neovim custom config
 - `.ideavimrc`
