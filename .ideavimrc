@@ -28,4 +28,5 @@ nnoremap <leader>ff :action GotoFile<CR>
 nnoremap <leader>fm :action ReformatCode \| action OptimizeImports<CR>
 
 " utils
-nnoremap <leader>/ :action CommentByLineComment<CR>
+noremap <leader>/ :action CommentByLineComment<CR>
+noremap <leader>/ :action CommentByLineComment<CR>
