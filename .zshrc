@@ -121,3 +121,6 @@ else
 fi
 }
 
+### aliases
+alias k=kubectl
+alias tf=terraform
