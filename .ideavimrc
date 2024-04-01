@@ -23,6 +23,7 @@ nnoremap <S-Tab> :action PreviousTab<CR>
 
 " searching
 nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fa :action SearchEverywhere<CR>
 
 " code formatting
 nnoremap <leader>fm :action ReformatCode \| action OptimizeImports<CR>
