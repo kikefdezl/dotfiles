@@ -20,6 +20,8 @@ nnoremap <leader>x :action CloseEditor<CR>
 nnoremap <leader>h :action HideActiveWindow <CR>
 nnoremap <Tab> :action NextTab<CR>
 nnoremap <S-Tab> :action PreviousTab<CR>
+nnoremap <C-l> :action NextSplitter<CR>
+nnoremap <C-h> :action PrevSplitter<CR>
 
 " searching
 nnoremap <leader>ff :action GotoFile<CR>
@@ -29,5 +31,4 @@ nnoremap <leader>fa :action SearchEverywhere<CR>
 nnoremap <leader>fm :action ReformatCode \| action OptimizeImports<CR>
 
 " utils
-noremap <leader>/ :action CommentByLineComment<CR>
 noremap <leader>/ :action CommentByLineComment<CR>
