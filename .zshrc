@@ -99,7 +99,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
+
+
+# CUSTOM STUFF:
 
 # use `venv` to activate a venv in the CWD
 venv() {
@@ -111,16 +113,17 @@ if [[ "$VIRTUAL_ENV" != "" ]]; then
 fi
 
 # Check if the venv directory exists
-if [ -d "venv" ]; then
+if [ -d ".venv" ]; then
     echo -e "\n\e[1;33mActivating virtual environment...\e[0m"
-    source venv/bin/activate
+    source .venv/bin/activate
 else
     echo -e "\n\e[1;33mCreating and activating virtual environment...\e[0m"
-    python3 -m venv venv
-    source venv/bin/activate
+    uv venv 
+    source .venv/bin/activate
 fi
 }
 
 ### aliases
 alias k=kubectl
 alias tf=terraform
+alias pip="uv pip"
