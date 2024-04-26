@@ -11,25 +11,25 @@ nnoremap <leader>vv :e ~/.ideavimrc<CR>
 noremap <leader>vr :source ~/.ideavimrc<CR>
 
 " running & debugging
-nnoremap <leader>ru :action Run<CR>
-nnoremap <leader>de :action Debug<CR>
-nnoremap <leader>sp :action Stop \| action HideActiveWindow <CR>
+nmap <leader>ru <Action>(Run)
+nmap <leader>de <Action>(Debug)
+nmap <leader>sp <Action>(Stop) <Action>(HideActiveWindow)
 
 " window configs
-nnoremap <leader>x :action CloseEditor<CR>
-nnoremap <leader>h :action HideActiveWindow <CR>
-nnoremap <Tab> :action NextTab<CR>
-nnoremap <S-Tab> :action PreviousTab<CR>
-nnoremap <C-l> :action NextSplitter<CR>
-nnoremap <C-h> :action PrevSplitter<CR>
+nmap <leader>x <Action>(CloseEditor)
+nmap <leader>h <Action>(HideActiveWindow)
+nmap <Tab> <Action>(NextTab)
+nmap <S-Tab> <Action>(PreviousTa)
+nmap <C-l> <Action>(NextSplitter)
+nmap <C-h> <Action>(PrevSplitter)
 
 " searching
-nnoremap <leader>ff :action GotoFile<CR>
-nnoremap <leader>ft :action TextSearchAction<CR>
-nnoremap <leader>fa :action SearchEverywhere<CR>
+nmap <leader>ff <Action>(GotoFile)
+nmap <leader>fw <Action>(TextSearchAction)
+nmap <leader>fa <Action>(SearchEverywhere)
 
 " code formatting
-nnoremap <leader>fm :action ReformatCode \| action OptimizeImports<CR>
+nmap <leader>fm <Action>(ReformatCode) <Action>(OptimizeImports)
 
 " utils
-noremap <leader>/ :action CommentByLineComment<CR>
+nmap <leader>/ <Action>(CommentByLineComment)
