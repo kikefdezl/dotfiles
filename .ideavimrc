@@ -19,7 +19,7 @@ nmap <leader>sp <Action>(Stop) <Action>(HideActiveWindow)
 nmap <leader>x <Action>(CloseEditor)
 nmap <leader>h <Action>(HideActiveWindow)
 nmap <Tab> <Action>(NextTab)
-nmap <S-Tab> <Action>(PreviousTa)
+nmap <S-Tab> <Action>(PreviousTab)
 nmap <C-l> <Action>(NextSplitter)
 nmap <C-h> <Action>(PrevSplitter)
 
@@ -29,7 +29,11 @@ nmap <leader>fw <Action>(TextSearchAction)
 nmap <leader>fa <Action>(SearchEverywhere)
 
 " code formatting
-nmap <leader>fm <Action>(ReformatCode) <Action>(OptimizeImports)
+nmap <leader>fm <Action>(OptimizeImports) <Action>(ReformatCode)
 
 " utils
+vmap <leader>/ <Action>(CommentByLineComment)
 nmap <leader>/ <Action>(CommentByLineComment)
+
+" viz
+nmap <leader>sm <Action>(ShowIntentionActions)
