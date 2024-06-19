@@ -22,6 +22,8 @@ nmap <Tab> <Action>(NextTab)
 nmap <S-Tab> <Action>(PreviousTab)
 nmap <C-l> <Action>(NextSplitter)
 nmap <C-h> <Action>(PrevSplitter)
+nmap <C-A-l> <Action>(MoveEditorToOppositeTabGroup)
+nmap <C-A-h> <Action>(MoveEditorToOppositeTabGroup)
 
 " searching
 nmap <leader>ff <Action>(GotoFile)
@@ -29,7 +31,7 @@ nmap <leader>fw <Action>(TextSearchAction)
 nmap <leader>fa <Action>(SearchEverywhere)
 
 " code formatting
-nmap <leader>fm <Action>(OptimizeImports) <Action>(ReformatCode)
+nmap <leader>fm <Action>(ReformatCode)
 
 " utils
 vmap <leader>/ <Action>(CommentByLineComment)
