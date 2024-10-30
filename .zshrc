@@ -127,3 +127,6 @@ fi
 alias k=kubectl
 alias tf=terraform
 alias pip="uv pip"
+
+### keymaps
+bindkey '^p' up-line-or-beginning-search
