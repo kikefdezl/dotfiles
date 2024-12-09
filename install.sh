@@ -9,3 +9,8 @@ echo "Installed ~/.zshrc"
 cp .ideavimrc ~/
 echo "Installed ~/.ideavimrc"
 
+# .tmux.conf
+cp .tmux.conf ~/
+tmux source-file ~/.tmux.conf
+echo "Installed ~/.tmux.conf"
+

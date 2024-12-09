@@ -11,3 +11,4 @@ Installs:
 
 - `.zshrc`
 - `.ideavimrc`
+- `.tmux.conf`
