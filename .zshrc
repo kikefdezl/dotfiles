@@ -103,6 +103,13 @@ source $ZSH/oh-my-zsh.sh
 
 # CUSTOM STUFF:
 
+### Options
+
+# unsets writing a folder name to auto `cd` into it
+# I don't like this because it conflicts if you have a binary with 
+# the same name.
+unsetopt autocd
+
 # use `venv` to activate a venv in the CWD
 venv() {
 # Check if already activated
@@ -130,3 +137,5 @@ alias pip="uv pip"
 
 ### keymaps
 bindkey '^p' up-line-or-beginning-search
+
+### 
