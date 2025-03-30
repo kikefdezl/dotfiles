@@ -2,7 +2,11 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes for other themes
-ZSH_THEME="kafeitu"
+if [ $HOST = "archpi" ]; then
+    ZSH_THEME="mrtazz"
+else
+    ZSH_THEME="kafeitu"
+fi
 
 plugins=(git)
 
