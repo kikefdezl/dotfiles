@@ -21,8 +21,10 @@ alias pip="uv pip"
 # ==== custom keymaps & bindings ==== 
 bindkey '^p' up-line-or-beginning-search
 
-# ==== functions ====
+# ==== load tokens ====
+[ -f ~/.tokens ] && source ~/.tokens
 
+# ==== functions ====
 venv() {
     # use `venv` to activate a venv in the CWD
 
@@ -47,5 +49,15 @@ venv() {
 loginall() {
     # runs the loginall.sh script at ~/scripts
     ~/scripts/loginall.sh
+}
+
+HOME_ASSISTANT_URL=http://192.168.1.203:8123
+
+sit(){
+    curl -X POST $HOME_ASSISTANT_URL/api/services/script/sit -H "Authorization: Bearer $HOME_ASSISTANT_BEARER_TOKEN"
+}
+
+stand(){
+    curl -X POST $HOME_ASSISTANT_URL/api/services/script/stand -H "Authorization: Bearer $HOME_ASSISTANT_BEARER_TOKEN"
 }
 
