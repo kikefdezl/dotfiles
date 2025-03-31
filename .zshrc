@@ -58,10 +58,12 @@ loginall() {
 HOME_ASSISTANT_URL=http://192.168.1.203:8123
 
 sit(){
-    curl -X POST $HOME_ASSISTANT_URL/api/services/script/sit -H "Authorization: Bearer $HOME_ASSISTANT_BEARER_TOKEN"
+    curl -s -o /dev/null -X POST $HOME_ASSISTANT_URL/api/services/script/sit -H "Authorization: Bearer $HOME_ASSISTANT_BEARER_TOKEN"
+    echo "OK!"
 }
 
 stand(){
-    curl -X POST $HOME_ASSISTANT_URL/api/services/script/stand -H "Authorization: Bearer $HOME_ASSISTANT_BEARER_TOKEN"
+    curl -s -o /dev/null -X POST $HOME_ASSISTANT_URL/api/services/script/stand -H "Authorization: Bearer $HOME_ASSISTANT_BEARER_TOKEN"
+    echo "OK!"
 }
 
