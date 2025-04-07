@@ -9,10 +9,12 @@ echo "Installed ~/.zshrc"
 cp .ideavimrc ~/
 echo "Installed ~/.ideavimrc"
 
-# .tmux.conf
+# tmux
 cp .tmux.conf ~/
 tmux source-file ~/.tmux.conf
 echo "Installed ~/.tmux.conf"
+cp -r .tmux_sessions ~/
+echo "Installed ~/.tmux_sessions/"
 
 # ghostty config
 cp -r .config/ghostty ~/.config

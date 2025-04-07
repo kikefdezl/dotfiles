@@ -22,6 +22,8 @@ alias k=kubectl
 alias tf=terraform
 alias pip="uv pip"
 
+alias tmuxtrain="~/.tmux_sessions/train.sh"
+
 # ==== custom keymaps & bindings ==== 
 bindkey '^p' up-line-or-beginning-search
 
