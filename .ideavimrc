@@ -15,6 +15,9 @@ nmap <leader>ru <Action>(Run)
 nmap <leader>de <Action>(Debug)
 nmap <leader>sp <Action>(Stop) <Action>(HideActiveWindow)
 
+" refactoring
+nmap <leader>rn <Action>(RenameElement)
+
 " window configs
 nmap <leader>x <Action>(CloseEditor)
 nmap <leader>h <Action>(HideActiveWindow)
@@ -39,3 +42,4 @@ nmap <leader>/ <Action>(CommentByLineComment)
 
 " viz
 nmap <leader>sm <Action>(ShowIntentionActions)
+
