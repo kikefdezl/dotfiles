@@ -7,9 +7,14 @@
 # ====== MY CONFIG =====
 
 # appearance
-theme = NvimDark
-background-opacity = 0.8
-resize-overlay = never
+theme=NvimDark
+background-opacity=0.8
+resize-overlay=never
 
 # keybinds
-keybind = ctrl+enter=text:\n
+keybind=ctrl+enter=text:\n
+
+# size
+font-size=13  # gets multiplied by 1.25 with my GNOME text scaling factor
+window-width=120
+window-height=32
