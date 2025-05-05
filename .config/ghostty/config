@@ -15,6 +15,7 @@ resize-overlay=never
 keybind=ctrl+enter=text:\n
 
 # size
-font-size=13  # gets multiplied by 1.25 with my GNOME text scaling factor
+# font-size gets multiplied by 1.25 with my GNOME text scaling factor
+font-size=13  
 window-width=120
 window-height=32
