@@ -23,14 +23,17 @@ alias tf=terraform
 alias pip="uv pip"
 
 alias tmuxtrain="~/.tmux_sessions/train.sh"
+alias tmuxdev="./.tmux.sh"
 
 # ==== custom keymaps & bindings ==== 
 bindkey '^p' up-line-or-beginning-search
 
 # ==== load tokens ====
-[ -f ~/.tokens ] && source ~/.tokens
+[ -f ~/.tokens ] && source ~/.tokens  # loads the .tokens file, which exports a few envvars with tokens
 
 # ==== functions ====
+
+# --- VENV ---
 venv() {
     # use `venv` to activate a venv in the CWD
 
@@ -52,20 +55,48 @@ venv() {
     fi
 }
 
-loginall() {
-    # runs the loginall.sh script at ~/scripts
-    ~/scripts/loginall.sh
+# --- CDD ---
+# cdd <repo>: change to ~/Dev/<repo>
+# Allows me to change directory to one of my repos in ~/Dev from any path. Supports tab to autocomplete
+DEV_DIR="$HOME/Dev"
+cdd() {
+  if [[ -z "$1" ]]; then
+    cd -- "$DEV_DIR"
+  else
+    local matches=()
+    # Case-sensitive substring matching on directory names
+    for dir in "$DEV_DIR"/*(N/); do
+      [[ ${dir:t} == *"$1"* ]] && matches+=("$dir")
+    done
+
+    case ${#matches[@]} in
+      0) echo "No repo matching '*$1*' in $DEV_DIR" >&2; return 1 ;;
+      1) cd -- "${matches[1]}" ;;
+      *) 
+        echo "Multiple matches:" >&2
+        printf '  %s\n' "${matches[@]##*/}" >&2
+        return 1
+        ;;
+    esac
+  fi
 }
+# ZSH completion for cdd
+_cdd() {
+  local -a repos
+  # Get all directories under DEV_DIR
+  repos=("$DEV_DIR"/*(N/:t))
+  # Generate completion matches
+  _describe 'repo' repos
+}
+compdef _cdd cdd
 
+# --- SIT/STAND ---
 HOME_ASSISTANT_URL=http://192.168.1.203:8123
-
 sit(){
     curl -s -o /dev/null -X POST $HOME_ASSISTANT_URL/api/services/script/sit -H "Authorization: Bearer $HOME_ASSISTANT_BEARER_TOKEN"
     echo "OK!"
 }
-
 stand(){
     curl -s -o /dev/null -X POST $HOME_ASSISTANT_URL/api/services/script/stand -H "Authorization: Bearer $HOME_ASSISTANT_BEARER_TOKEN"
     echo "OK!"
 }
-
