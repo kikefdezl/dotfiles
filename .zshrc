@@ -80,7 +80,7 @@ cdd() {
     esac
   fi
 }
-# ZSH completion for cdd
+# ZSH tab-completion
 _cdd() {
   local -a repos
   # Get all directories under DEV_DIR
@@ -99,4 +99,16 @@ sit(){
 stand(){
     curl -s -o /dev/null -X POST $HOME_ASSISTANT_URL/api/services/script/stand -H "Authorization: Bearer $HOME_ASSISTANT_BEARER_TOKEN"
     echo "OK!"
+}
+
+# --- LOGINALL ---
+loginall() {
+
+
+    # runs the loginall.sh script at ~/scripts
+
+
+    ~/scripts/loginall.sh
+
+
 }
