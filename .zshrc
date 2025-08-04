@@ -25,6 +25,10 @@ alias pip="uv pip"
 alias tmuxtrain="~/.tmux_sessions/train.sh"
 alias tmuxdev="./.tmux.sh"
 
+alias k9sdev="k9s --context arn:aws:eks:eu-central-1:077967759497:cluster/dev-kubernetes"
+alias k9sprod="k9s --context arn:aws:eks:eu-central-1:077416050714:cluster/prod-kubernetes"
+alias k9sservices="k9s --context arn:aws:eks:eu-central-1:988633286193:cluster/services-kubernetes"
+
 # ==== custom keymaps & bindings ==== 
 bindkey '^p' up-line-or-beginning-search
 
@@ -103,12 +107,6 @@ stand(){
 
 # --- LOGINALL ---
 loginall() {
-
-
     # runs the loginall.sh script at ~/scripts
-
-
     ~/scripts/loginall.sh
-
-
 }
