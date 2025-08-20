@@ -18,5 +18,9 @@ echo "Installed ~/.tmux_sessions/"
 
 # ghostty config
 cp -r .config/ghostty ~/.config
-echo "Installed ~/.config/ghostty/config"
+echo "Installed ~/.config/ghostty"
+
+# zellij config
+cp -r .config/zellij ~/.config
+echo "Installed ~/.config/zellij"
 
