@@ -1,21 +1,24 @@
-# Run `ghostty +show-config --default --docs` to view a list of
-# all available config options and their default values.
-
-# Additionally, each config option is also explained in detail
-# on Ghostty's website, at https://ghostty.org/docs/config.
-
-# ====== MY CONFIG =====
+# Reference: https://ghostty.org/docs/config.
 
 # appearance
-theme=NvimDark
-background-opacity=0.8
-resize-overlay=never
+theme = NvimDark
+background-opacity = 0.8
+resize-overlay = never
+window-width = 240
+window-height = 120
+maximize = true
+window-padding-x = 4
+window-padding-y = 4
+gtk-titlebar = false
 
 # keybinds
-keybind=ctrl+enter=text:\n
+keybind = ctrl+enter=text:\n
 
-# size
+# font
+font-family = TX-02-Variable
+font-style = Book SemiCondensed
+font-style-italic = Book SemiCondensed Oblique
+font-style-bold = SemiBold SemiCondensed
+font-style-bold-italic = SemiBold SemiCondensed Oblique
 # font-size gets multiplied by 1.25 with my GNOME text scaling factor
-font-size=13  
-window-width=120
-window-height=32
+font-size = 16
