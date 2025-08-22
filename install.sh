@@ -6,3 +6,4 @@ stow --target "$HOME" tmux
 stow --target "$HOME" ghostty
 stow --target "$HOME" zellij
 stow --target "$HOME" hypr
+stow --target "$HOME" waybar

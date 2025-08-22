@@ -20,6 +20,7 @@ font-style = Book SemiCondensed
 font-style-italic = Book SemiCondensed Oblique
 font-style-bold = SemiBold SemiCondensed
 font-style-bold-italic = SemiBold SemiCondensed Oblique
+font-feature = ss02
 # font-size gets multiplied by 1.25 with my GNOME text scaling factor
 font-size = 16
 
