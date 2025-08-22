@@ -22,3 +22,5 @@ font-style-bold = SemiBold SemiCondensed
 font-style-bold-italic = SemiBold SemiCondensed Oblique
 # font-size gets multiplied by 1.25 with my GNOME text scaling factor
 font-size = 16
+
+command=zellij
