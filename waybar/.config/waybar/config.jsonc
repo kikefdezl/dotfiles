@@ -13,6 +13,7 @@
         "cpu",
         "memory",
         "temperature",
+        "network#bandwidth",
     ],
     "modules-center": [
         "clock",
@@ -109,13 +110,16 @@
         "tooltip": false
     },
     "memory": {
-        "format": "MEMORY {}%"
+        "format": "MEM {}%"
     },
     "temperature": {
         // "thermal-zone": 2,
         "hwmon-path": "/sys/devices/virtual/thermal/thermal_zone2/temp",
         "critical-threshold": 80,
         "format": "TEMP {temperatureC}°C",
+    },
+    "network#bandwidth": {
+         "format": " {bandwidthDownBits}"
     },
     "backlight": {
         // "device": "acpi_video1",

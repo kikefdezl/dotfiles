@@ -92,6 +92,7 @@ button:hover {
 #battery,
 #cpu,
 #memory,
+#network#bandwidth,
 #disk,
 #temperature,
 #backlight,
@@ -197,11 +198,23 @@ label:focus {
 }
 
 #cpu {
-    /* background-color: #000000; */
     color: #f59544;
 }
 
 #memory {
+    color: #000000;
+    background-color: #f59544;
+}
+
+#temperature {
+    color: #f59544;
+}
+
+#temperature.critical {
+    background-color: #fb4934;
+}
+
+#network.bandwidth {
     color: #000000;
     background-color: #f59544;
 }
@@ -256,14 +269,6 @@ label:focus {
 
 #custom-media.custom-vlc {
     background-color: #ffa000;
-}
-
-#temperature {
-    color: #f59544;
-}
-
-#temperature.critical {
-    background-color: #fb4934;
 }
 
 #tray {
