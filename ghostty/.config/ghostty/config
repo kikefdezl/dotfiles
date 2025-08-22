@@ -1,14 +1,14 @@
 # Reference: https://ghostty.org/docs/config.
 
 # appearance
-theme = NvimDark
-background-opacity = 0.8
+theme = gruvbox-material-hard-dark
+background-opacity = 0.4
 resize-overlay = never
 window-width = 240
 window-height = 120
 maximize = true
-window-padding-x = 4
-window-padding-y = 4
+window-padding-x = 15
+window-padding-y = 13,0
 gtk-titlebar = false
 
 # keybinds
@@ -23,4 +23,4 @@ font-style-bold-italic = SemiBold SemiCondensed Oblique
 # font-size gets multiplied by 1.25 with my GNOME text scaling factor
 font-size = 16
 
-command=zellij
+command=tmux
