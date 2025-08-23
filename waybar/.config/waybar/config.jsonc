@@ -107,11 +107,11 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "CPU {usage}%",
+        "format": "CPU {usage:2d}%",
         "tooltip": false
     },
     "memory": {
-        "format": "MEM {}%"
+        "format": "MEM {:2d}%"
     },
     "temperature": {
         // "thermal-zone": 2,
