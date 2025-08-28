@@ -25,9 +25,9 @@ alias pip="uv pip"
 alias tmuxtrain="~/.tmux_sessions/train.sh"
 alias tmuxdev="./.tmux.sh"
 
-alias k9sdev="k9s --context arn:aws:eks:eu-central-1:077967759497:cluster/dev-kubernetes"
-alias k9sprod="k9s --context arn:aws:eks:eu-central-1:077416050714:cluster/prod-kubernetes"
-alias k9sservices="k9s --context arn:aws:eks:eu-central-1:988633286193:cluster/services-kubernetes"
+alias k9sdev="k9s --context dev -c pod"
+alias k9sprod="k9s --context prod-kubernetes -c pod"
+alias k9sservices="k9s --context services-kubernetes -c pod"
 
 # ==== custom keymaps & bindings ==== 
 bindkey '^p' up-line-or-beginning-search
