@@ -32,6 +32,9 @@ alias k9sservices="k9s --context services-kubernetes -c pod"
 # ==== custom keymaps & bindings ==== 
 bindkey '^p' up-line-or-beginning-search
 
+# ==== envvars ====
+export EDITOR="nvim"
+
 # ==== load tokens ====
 [ -f ~/.tokens ] && source ~/.tokens  # loads the .tokens file, which exports a few envvars with tokens
 
