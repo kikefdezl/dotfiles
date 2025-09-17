@@ -1,7 +1,10 @@
 #!/bin/zsh
 
+HOSTNAME=$(cat /etc/hostname)
+echo $HOSTNAME
+
 # desktop
-if [[ "$(hostname)" == "arch-desktop" ]]; then
+if [[ $HOSTNAME == "arch-desktop" ]]; then
   stow --target "$HOME" zsh
   stow --target "$HOME" ideavim
   stow --target "$HOME" tmux
@@ -10,10 +13,11 @@ if [[ "$(hostname)" == "arch-desktop" ]]; then
   stow --target "$HOME" zellij
   stow --target "$HOME" hypr
   stow --target "$HOME" waybar
+  stow --target "$HOME" yazi
 fi
 
 # laptop
-if [[ "$(hostname)" == "kike-ThinkPad" ]]; then
+if [[ $HOSTNAME == "kike-ThinkPad" ]]; then
   stow --target "$HOME" zsh
   stow --target "$HOME" ghostty
   stow --target "$HOME" k9s
