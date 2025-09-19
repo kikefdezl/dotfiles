@@ -120,7 +120,7 @@
         "format": "TEMP {temperatureC}°C",
     },
     "network#bandwidth": {
-         "format": " {bandwidthDownBits}"
+         "format": " {bandwidthDownBytes}"
     },
     "backlight": {
         // "device": "acpi_video1",
