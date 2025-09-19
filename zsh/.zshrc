@@ -99,13 +99,21 @@ compdef _cdd cdd
 
 # --- SIT/STAND ---
 HOME_ASSISTANT_URL=http://192.168.1.203:8123
-sit(){
-    curl -s -o /dev/null -X POST $HOME_ASSISTANT_URL/api/services/script/sit -H "Authorization: Bearer $HOME_ASSISTANT_BEARER_TOKEN"
-    echo "OK!"
+sit() {
+    if output=$(curl -sSf -X POST "$HOME_ASSISTANT_URL/api/services/script/sit" \
+        -H "Authorization: Bearer $HOME_ASSISTANT_BEARER_TOKEN" 2>&1); then
+        echo "OK!"
+    else
+        echo "Failed: $output"
+    fi
 }
 stand(){
-    curl -s -o /dev/null -X POST $HOME_ASSISTANT_URL/api/services/script/stand -H "Authorization: Bearer $HOME_ASSISTANT_BEARER_TOKEN"
-    echo "OK!"
+    if output=$(curl -sSf -X POST "$HOME_ASSISTANT_URL/api/services/script/stand" \
+        -H "Authorization: Bearer $HOME_ASSISTANT_BEARER_TOKEN" 2>&1); then
+        echo "OK!"
+    else
+        echo "Failed: $output"
+    fi
 }
 
 # --- LOGINALL ---
