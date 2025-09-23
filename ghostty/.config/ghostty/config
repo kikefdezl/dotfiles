@@ -7,7 +7,7 @@ resize-overlay = never
 window-width = 240
 window-height = 120
 maximize = true
-window-padding-x = 15
+window-padding-x = 8
 window-padding-y = 13,0
 gtk-titlebar = false
 
@@ -21,7 +21,6 @@ font-style-italic = Book SemiCondensed Oblique
 font-style-bold = SemiBold SemiCondensed
 font-style-bold-italic = SemiBold SemiCondensed Oblique
 font-feature = ss02
-# font-size gets multiplied by 1.25 with my GNOME text scaling factor
 font-size = 16
 
 command=tmux

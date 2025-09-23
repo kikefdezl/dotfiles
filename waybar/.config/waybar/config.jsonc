@@ -2,13 +2,14 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
+    "output": ["DP-1"],
     "margin-top": 0,
-    "margin-bottom": -30,  // to alight with the outer gap of hyprland windows
+    "margin-bottom": 0,  // to align with the outer gap of hyprland windows
     "margin-left":  18,
     "margin-right": 18,
     // "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 10, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
         "cpu",
@@ -21,11 +22,11 @@
     ],
     "modules-right": [
         "tray",
-        "idle_inhibitor",
-        "mpd",
+        // "idle_inhibitor",
+        // "mpd",
         "pulseaudio",
-        "power-profiles-daemon",
-        "battery",
+        // "power-profiles-daemon",
+        // "battery",
         "network",
     ],
     // Modules configuration
