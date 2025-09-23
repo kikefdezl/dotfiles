@@ -17,6 +17,7 @@ fi
 # laptop
 if [[ $HOSTNAME == "kike-ThinkPad" ]]; then
   stow --target "$HOME" zsh
+  stow --target "$HOME" tmux
   stow --target "$HOME" ghostty
   stow --target "$HOME" k9s
 fi
