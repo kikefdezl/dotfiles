@@ -9,7 +9,6 @@ if [[ $HOSTNAME == "arch-desktop" ]]; then
   stow --target "$HOME" tmux
   stow --target "$HOME" ghostty
   stow --target "$HOME" k9s
-  stow --target "$HOME" zellij
   stow --target "$HOME" hypr
   stow --target "$HOME" waybar
   stow --target "$HOME" yazi
