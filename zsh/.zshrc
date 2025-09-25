@@ -1,7 +1,7 @@
-# Path to oh-my-zsh installation.
+# ==== oh my zsh ==== 
 export ZSH="$HOME/.oh-my-zsh"
 
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes for other themes
+# https://github.com/ohmyzsh/ohmyzsh/wiki/Themes for other themes
 if [ $HOST = "archpi" ]; then
     ZSH_THEME="mrtazz"
 else
@@ -12,22 +12,19 @@ plugins=( git z )
 
 source $ZSH/oh-my-zsh.sh
 
+# ==== options ====
+
 # unsets writing a folder name to auto `cd` into it
 # I don't like this because it conflicts if you have a binary with 
 # the same name
 unsetopt autocd
 
 # ==== aliases ====
-alias k=kubectl
 alias tf=terraform
 alias pip="uv pip"
 
 alias tmuxtrain="~/.tmux_sessions/train.sh"
 alias tmuxdev="./.tmux.sh"
-
-alias k9sdev="k9s --context dev -c pod"
-alias k9sprod="k9s --context prod-kubernetes -c pod"
-alias k9sservices="k9s --context services-kubernetes -c pod"
 
 # ==== custom keymaps & bindings ==== 
 bindkey '^p' up-line-or-beginning-search
@@ -35,7 +32,7 @@ bindkey '^p' up-line-or-beginning-search
 # ==== envvars ====
 export EDITOR="nvim"
 
-# ==== load tokens ====
+# ==== tokens ====
 [ -f ~/.tokens ] && source ~/.tokens  # loads the .tokens file, which exports a few envvars with tokens
 
 # ==== functions ====
@@ -130,3 +127,13 @@ port_forward_prod() {
 port_forward_services() {
     ~/scripts/port_fwd_services.sh
 }
+
+# ==== kubernetes ====
+
+# for some reason server auth won't work if you change the order
+kubeconfigs=( "$HOME/.kube/ovh-dev.yml" "$HOME/.kube/config" )
+export KUBECONFIG="${KUBECONFIG}:${kubeconfigs[*]// /:}"
+
+alias k9sdev="k9s --context dev -c pod"
+alias k9sprod="k9s --context prod-kubernetes -c pod"
+alias k9sservices="k9s --context services-kubernetes -c pod"
