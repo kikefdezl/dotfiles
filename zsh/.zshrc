@@ -2,7 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes for other themes
-if [ $HOST = "archpi" ]; then
+if [ $HOST = "pi" ]; then
     ZSH_THEME="mrtazz"
 else
     ZSH_THEME="kafeitu"
