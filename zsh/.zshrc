@@ -131,7 +131,7 @@ port_forward_services() {
 # ==== kubernetes ====
 
 # for some reason server auth won't work if you change the order
-kubeconfigs=( "$HOME/.kube/ovh-dev.yml" "$HOME/.kube/config" )
+kubeconfigs=( "$HOME/.kube/ovh-dev.yml" "$HOME/.kube/ovh-prod.yml" "$HOME/.kube/config" )
 export KUBECONFIG="${KUBECONFIG}:${kubeconfigs[*]// /:}"
 
 alias k9sdev="k9s --context dev -c pod"
