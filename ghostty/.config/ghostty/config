@@ -1,8 +1,8 @@
 # Reference: https://ghostty.org/docs/config.
 
 # appearance
-theme = gruvbox-material-hard-dark
-background-opacity = 0.4
+theme = nordic
+background-opacity = 1.0
 resize-overlay = never
 window-width = 240
 window-height = 120

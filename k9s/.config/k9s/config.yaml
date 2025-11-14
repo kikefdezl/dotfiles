@@ -18,7 +18,7 @@ k9s:
     noIcons: true
     defaultsToFullScreen: false
     useFullGVRTitle: false
-    skin: gruvbox-material-dark-hard
+    skin: nord
   skipLatestRevCheck: false
   disablePodCounting: false
   shellPod:

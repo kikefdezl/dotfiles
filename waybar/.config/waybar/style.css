@@ -198,16 +198,16 @@ label:focus {
 }
 
 #cpu {
-    color: #f59544;
+    color: #d08770;
 }
 
 #memory {
     color: #000000;
-    background-color: #f59544;
+    background-color: #d08770;
 }
 
 #temperature {
-    color: #f59544;
+    color: #d08770;
 }
 
 #temperature.critical {
@@ -216,7 +216,7 @@ label:focus {
 
 #network.bandwidth {
     color: #000000;
-    background-color: #f59544;
+    background-color: #d08770;
 }
 
 #disk {
@@ -230,7 +230,7 @@ label:focus {
 
 #network {
     background-color: #1c1c1c;
-    color: #f59544;
+    color: #d08770;
 }
 
 #network.disconnected {
@@ -239,12 +239,12 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f59544;
+    background-color: #d08770;
     color: #000000;
 }
 
 #pulseaudio.muted {
-    background-color: #f59544;
+    background-color: #d08770;
     color: #000000;
 }
 
@@ -268,7 +268,7 @@ label:focus {
 }
 
 #custom-media.custom-vlc {
-    background-color: #ffa000;
+    background-color: #d08770;
 }
 
 #tray {
@@ -287,7 +287,7 @@ label:focus {
 #idle_inhibitor {
     background-color: #1c1c1c;
     border-radius: 8px 0px 0px 8px;
-    color: #f59544;
+    color: #d08770;
 }
 
 #idle_inhibitor.activated {
@@ -313,7 +313,7 @@ label:focus {
 
 #mpd.paused {
     background-color: #1c1c1c;
-    color: #d79921;
+    color: #d08770;
 }
 
 #language {
