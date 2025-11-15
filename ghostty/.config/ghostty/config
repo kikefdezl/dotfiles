@@ -2,7 +2,7 @@
 
 # appearance
 theme = nordic
-background-opacity = 1.0
+background-opacity = 0.8
 resize-overlay = never
 window-width = 240
 window-height = 120
