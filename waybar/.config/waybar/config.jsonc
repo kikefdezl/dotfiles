@@ -4,6 +4,7 @@
     "height": 28,
     "margin-left":  10,
     "margin-right": 18,
+    "margin-bottom": -10,
     "output": ["DP-1"],
 
     "modules-left": ["hyprland/workspaces"],
