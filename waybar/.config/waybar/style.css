@@ -21,29 +21,30 @@ window#waybar.solo {
 
 #workspaces button {
     padding:    0 5px;
-    color:      rgba(217, 216, 216, 0.4);
+    color: rgba(217, 216, 216, 0.4);  /* #d9d8d8 */
 }
 
 #workspaces button.visible {
-    color:      rgba(217, 216, 216, 1);
-}
-
-#workspaces button.focused {
-    border-top: 3px solid rgba(217, 216, 216, 1);
-    border-bottom: 3px solid rgba(217, 216, 216, 0);
-}
-
-#workspaces button.urgent {
-    color:      rgba(238, 46, 36, 1);
+    color: #d08770;
 }
 
 #mode, #battery, #cpu, #memory, #network, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather, #custom-mail, #pulseaudio {
-    margin:     0px 6px 0px 16px;
+    margin:     0px 0px 0px 16px;
     min-width:  25px;
+}
+
+#network {
+    margin:     0px 12px 0px 16px;
 }
 
 #pulseaudio {
     font-size: 18px;
+}
+
+#custom-spotify{
+    margin: 0px 60px 0px 16px;
+    font-size: 18px;
+    color: #a3be8c;
 }
 
 #clock {

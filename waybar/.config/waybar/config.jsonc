@@ -8,7 +8,7 @@
 
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "custom/spotify", "custom/weather", "backlight", "pulseaudio", "network", "battery"],
+    "modules-right": ["custom/spotify", "tray", "custom/weather", "backlight", "pulseaudio", "network", "battery"],
     "clock": {
         "format": "{:%d-%b %H:%M}",
         "tooltip": false,
