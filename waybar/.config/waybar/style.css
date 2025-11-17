@@ -1,7 +1,8 @@
 * {
     font-family: TX-02-Variable;
     font-size: 21px;
-    font-weight: normal
+    font-style: normal;
+    font-weight: normal;
 }
 
 window {
@@ -36,9 +37,13 @@ window#waybar.solo {
     color:      rgba(238, 46, 36, 1);
 }
 
-#mode, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather, #custom-mail {
-    margin:     0px 6px 0px 10px;
+#mode, #battery, #cpu, #memory, #network, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather, #custom-mail, #pulseaudio {
+    margin:     0px 6px 0px 16px;
     min-width:  25px;
+}
+
+#pulseaudio {
+    font-size: 18px;
 }
 
 #clock {
