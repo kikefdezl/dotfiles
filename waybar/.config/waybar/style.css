@@ -28,7 +28,7 @@ window#waybar.solo {
     color: #d08770;
 }
 
-#mode, #battery, #cpu, #memory, #network, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather, #custom-mail, #pulseaudio {
+#mode, #battery, #cpu, #memory, #network, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-mail, #pulseaudio {
     margin:     0px 0px 0px 16px;
     min-width:  25px;
 }
