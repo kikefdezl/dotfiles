@@ -11,6 +11,7 @@ if [[ $HOSTNAME == "arch-desktop" ]]; then
   stow --target "$HOME" k9s
   stow --target "$HOME" hypr
   stow --target "$HOME" waybar
+  stow --target "$HOME" wofi
   stow --target "$HOME" yazi
 fi
 
