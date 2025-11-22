@@ -39,12 +39,13 @@ window#waybar.solo {
 
 #pulseaudio {
     font-size: 18px;
+    font-weight: 500;
 }
 
 #custom-spotify{
     margin: 0px 60px 0px 16px;
     font-size: 18px;
-    color: #a3be8c;
+    color: #A3BE8C;
 }
 
 #clock {
