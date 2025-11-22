@@ -1,5 +1,6 @@
 * {
-	font-family: "Hack", monospace;
+	font-family: "TX-02-Variable", monospace;
+	font-weight: semibold;
 }
 
 window {
@@ -31,10 +32,6 @@ window {
 #text {
 	padding: 4px;
 	color: white;
-}
-
-#entry:nth-child(even){
-	background-color: #404552;
 }
 
 #entry:selected {
