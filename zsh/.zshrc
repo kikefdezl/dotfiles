@@ -82,7 +82,6 @@ cdd() {
         return 1
         ;;
     esac
-    nvim .
   fi
 }
 # ZSH tab-completion
