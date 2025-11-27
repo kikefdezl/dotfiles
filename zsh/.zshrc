@@ -128,6 +128,26 @@ port_forward_services() {
     ~/scripts/port_fwd_services.sh
 }
 
+# --- HEADPHONES / SPEAKERS ---
+change_to_audio_device() {
+    local device_name="$1"
+    local sink_id=$(wpctl status | awk '/Sinks:/,/Sources:/' | grep -i "$device_name" | grep -oP '\d+' | head -1)
+
+    if [ -z "$sink_id" ]; then
+        echo "Error: Sink matching '$device_name' not found"
+        return 1
+    fi
+
+    wpctl set-default "$sink_id"
+    echo "Switched to $device_name (ID: $sink_id)"
+}
+headphones() {
+    change_to_audio_device "hyperx"
+}
+speakers() {
+    change_to_audio_device "pcm2704"
+}
+
 # ==== kubernetes ====
 
 # for some reason server auth won't work if you change the order
