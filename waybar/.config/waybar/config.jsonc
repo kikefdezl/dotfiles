@@ -47,7 +47,7 @@
             "default": ["", "", ""]
         },
         "scroll-step": 10,
-        "on-click": "pavucontrol"
+        "on-click": "wiremix --tab output"
     },
     "custom/spotify": {
         "interval": 1,
