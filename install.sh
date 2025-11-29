@@ -10,6 +10,7 @@ if [[ $HOSTNAME == "arch-desktop" ]]; then
   stow --target "$HOME" ghostty
   stow --target "$HOME" k9s
   stow --target "$HOME" hypr
+  stow --target "$HOME" mltop
   stow --target "$HOME" waybar
   stow --target "$HOME" wofi
   stow --target "$HOME" yazi
@@ -19,6 +20,7 @@ fi
 if [[ $HOSTNAME == "kike-ThinkPad" ]]; then
   stow --target "$HOME" zsh
   stow --target "$HOME" tmux
+  stow --target "$HOME" mltop
   stow --target "$HOME" ghostty
   stow --target "$HOME" k9s
 fi
@@ -26,4 +28,5 @@ fi
 # pi
 if [[ $HOSTNAME == "pi" ]]; then
   stow --target "$HOME" zsh
+  stow --target "$HOME" mltop
 fi
