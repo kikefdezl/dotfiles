@@ -12,6 +12,9 @@ plugins=( git z )
 
 source $ZSH/oh-my-zsh.sh
 
+# ==== PATH ====
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # ==== options ====
 
 # unsets writing a folder name to auto `cd` into it
