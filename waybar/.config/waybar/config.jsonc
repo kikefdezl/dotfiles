@@ -5,26 +5,41 @@
     "margin-left":  10,
     "margin-right": 18,
     "margin-bottom": -10,
-    "output": ["DP-1"],
-
+    // "output": ["eDP-1", "DP-1"],
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/spotify", "tray", "backlight", "pulseaudio", "network", "battery"],
+    "modules-right": ["custom/spotify", "tray", "pulseaudio", "bluetooth" ,"network", "battery"],
     "clock": {
         "format": "{:%d-%b %H:%M}",
         "tooltip": false,
     },
     "battery": {
-        "format": "{capacity}% {icon}",
-        "format-alt": "{time} {icon}",
+        "format": "{icon}",
+        "format-alt": "{icon}",
         "format-icons": ["", "", "", "", ""],
-        "format-charging": "{capacity}% ",
-        "interval": 30,
+        // "format-charging": "{icon}{capacity}%",
+        // "format-discharging": "{icon}{capacity}%",
+        "interval": 60,
         "states": {
             "warning": 25,
             "critical": 10
         },
-        "tooltip": false
+        "tooltip": true,
+        "tooltip-format": "{capacity}%"
+    },
+    "bluetooth": {
+        // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+        // "format": "󰂯 {status}",
+        // format-* handles every state, so default format is not necessary.
+        "format-on": "󰂯",
+        "format-off": "󰂲",
+        "format-disabled": "", // an empty format will hide the module
+        "format-no-controller": "", // an empty format will hide the module
+        "format-connected": "󰂱 {num_connections}",
+        // "tooltip-format": "{controller_alias}\t{controller_address}",
+        // "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
     },
     "network": {
         "format": "{icon}",
@@ -39,15 +54,17 @@
     "tooltip": false
     },
     "pulseaudio": {
-        "format": "{icon}{volume: >3}%",
-        "format-alt": "{volume} {icon}",
+        "format": "{icon}",
+        "format-alt": "{icon}{volume: >3}%",
         "format-alt-click": "click-right",
         "format-muted": " muted",
         "format-icons": {
             "default": ["", "", ""]
         },
         "scroll-step": 10,
-        "on-click": "wiremix --tab output"
+        "on-click": "wiremix --tab output",
+        "tooltip": true,
+        "tooltip-format": "{volume}%"
     },
     "custom/spotify": {
         "interval": 1,
@@ -89,13 +106,8 @@
         "exec": "~/.config/waybar/modules/mail.py",
         "tooltip": false
     },
-    "custom/test": {
-        "format": "{}",
-        "exec": "/tmp/test blub",
-        "param": "blah",
-        "interval": 5
-    },
     "tray": {
-        "icon-size": 18
+        "icon-size": 14,
+        "spacing": 10
     }
 }
