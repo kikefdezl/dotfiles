@@ -1,6 +1,5 @@
 [theme]
 processes_cpu = "#d8dee9"
-processes_header_bg = "green"
 bar_low_use = "white"
 bar_medium_high_use = "#d08770"
 bar_text = "#4c566a"
