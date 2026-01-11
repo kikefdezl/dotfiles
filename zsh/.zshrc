@@ -150,13 +150,3 @@ headphones() {
 speakers() {
     change_to_audio_device "pcm2704"
 }
-
-# ==== kubernetes ====
-
-# for some reason server auth won't work if you change the order
-kubeconfigs=( "$HOME/.kube/ovh-dev.yml" "$HOME/.kube/ovh-prod.yml" "$HOME/.kube/config" )
-export KUBECONFIG="${KUBECONFIG}:${kubeconfigs[*]// /:}"
-
-alias k9sdev="k9s --context dev -c pod"
-alias k9sprod="k9s --context prod-kubernetes -c pod"
-alias k9sservices="k9s --context services-kubernetes -c pod"
