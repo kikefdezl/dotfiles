@@ -5,7 +5,7 @@ echo $HOSTNAME
 
 # desktop
 if [[ $HOSTNAME == "arch-desktop" ]]; then
-  stow --target "$HOME" zsh
+  stow --target "$HOME" dunst
   stow --target "$HOME" tmux
   stow --target "$HOME" ghostty
   stow --target "$HOME" k9s
@@ -14,6 +14,7 @@ if [[ $HOSTNAME == "arch-desktop" ]]; then
   stow --target "$HOME" waybar
   stow --target "$HOME" wofi
   stow --target "$HOME" yazi
+  stow --target "$HOME" zsh
 fi
 
 # thinkpad
@@ -45,13 +46,14 @@ fi
 
 # thinkpad-t14s
 if [[ $HOSTNAME == "kike-thinkpad-t14s" ]]; then
-  stow --target "$HOME" zsh
+  stow --target "$HOME" dunst
   stow --target "$HOME" ghostty
   stow --target "$HOME" tmux
   stow --target "$HOME" -d hypr common laptop
   stow --target "$HOME" waybar
   stow --target "$HOME" wofi
-  stow --target "$HOME" yazi
   stow --target "$HOME" mltop
   stow --target "$HOME" k9s
+  stow --target "$HOME" yazi
+  stow --target "$HOME" zsh
 fi
