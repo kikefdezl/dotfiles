@@ -108,3 +108,11 @@ headphones() {
 speakers() {
     change_to_audio_device "pcm2704"
 }
+
+# --- VPN ---
+vpnup() {
+    nmcli connection up "robotise"
+}
+vpndown() {
+    nmcli connection down "robotise"
+}
