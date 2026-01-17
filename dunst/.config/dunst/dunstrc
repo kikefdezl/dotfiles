@@ -1,5 +1,5 @@
 [global]
-monitor = 0
+monitor= 0
 follow = mouse
 width = (200, 250)
 height = (60, 120)
@@ -12,8 +12,8 @@ horizontal_padding = 32
 frame_width = 2
 sort = no
 idle_threshold = 120
-font = TX-02 12
-line_height = 4
+font = TX-02 Bold 14
+line_height = 0
 markup = full
 format = %s\n%b
 alignment = left
@@ -23,7 +23,7 @@ ignore_newline = no
 stack_duplicates = false
 hide_duplicate_count = yes
 show_indicators = no
-icon_position = off
+icon_position = left
 sticky_history = yes
 history_length = 20
 browser = /usr/bin/firefox -new-tab
@@ -31,21 +31,23 @@ always_run_script = true
 title = Dunst
 class = Dunst
 corner_radius = 10
+progress_bar = true
+highlight = "#d08770"
 
 [urgency_low]
 timeout = 4
 background = "#141c21"
-foreground = "#93a1a1"
+foreground = "#d8dee9"
 frame_color = "#d08770"
 
 [urgency_normal]
 timeout = 8
 background = "#141c21"
-foreground = "#93a1a1"
+foreground = "#d8dee9"
 frame_color = "#d08770"
 
 [urgency_critical]
 timeout = 0
-background = "#141c21"
+background = "#141c21c"
 foreground = "#93a1a1"
 frame_color = "#d06f79"
