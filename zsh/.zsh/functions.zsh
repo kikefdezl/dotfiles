@@ -74,12 +74,6 @@ stand(){
     fi
 }
 
-# --- LOGINALL ---
-loginall() {
-    # runs the loginall.sh script at ~/scripts
-    ~/scripts/loginall.sh
-}
-
 # --- PORT FORWARD ---
 port_forward_prod() {
     ~/scripts/port_fwd_prod.sh
