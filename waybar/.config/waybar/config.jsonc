@@ -5,7 +5,6 @@
     "margin-left":  10,
     "margin-right": 18,
     "margin-bottom": -10,
-    // "output": ["eDP-1", "DP-1"],
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["custom/spotify", "tray", "pulseaudio", "bluetooth" ,"network", "custom/vpn", "battery"],
@@ -17,8 +16,6 @@
         "format": "{icon}",
         "format-alt": "{icon}",
         "format-icons": ["", "", "", "", ""],
-        // "format-charging": "{icon}{capacity}%",
-        // "format-discharging": "{icon}{capacity}%",
         "interval": 60,
         "states": {
             "warning": 25,
@@ -27,6 +24,7 @@
         "tooltip": true,
         "tooltip-format": "{capacity}%"
     },
+    // TODO: Setup bluetooth
     "bluetooth": {
         // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
         // "format": "󰂯 {status}",
@@ -48,6 +46,10 @@
         "exec-if": "pgrep spotify",
         "escape": true
     },
+    "tray": {
+        "icon-size": 14,
+        "spacing": 10
+    }
     "pulseaudio": {
         "format": "{icon}",
         "format-alt": "{icon}{volume: >3}%",
@@ -79,14 +81,6 @@
         "exec": "~/.config/waybar/modules/vpn.sh",
         "escape": true
     },
-    "custom/storage": {
-        "format": "{} ",
-        "format-alt": "{percentage}% ",
-        "format-alt-click": "click-right",
-        "return-type": "json",
-        "interval": 60,
-        "exec": "~/.config/waybar/modules/storage.sh"
-    },
     "backlight": {
         "format": "{icon}",
         "format-alt": "{percent}% {icon}",
@@ -95,25 +89,4 @@
         "on-scroll-down": "light -A 1",
         "on-scroll-up": "light -U 1"
     },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        },
-        "tooltip": false
-    },
-    "custom/mail": {
-        "format": "",
-        "format-alt": "{alt} ",
-        "format-alt-click": "click-right",
-        "interval": 60,
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/mail.py",
-        "tooltip": false
-    },
-    "tray": {
-        "icon-size": 14,
-        "spacing": 10
-    }
 }
