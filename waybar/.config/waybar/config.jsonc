@@ -49,7 +49,7 @@
     "tray": {
         "icon-size": 14,
         "spacing": 10
-    }
+    },
     "pulseaudio": {
         "format": "{icon}",
         "format-alt": "{icon}{volume: >3}%",
@@ -88,5 +88,5 @@
         "format-icons": ["", ""],
         "on-scroll-down": "light -A 1",
         "on-scroll-up": "light -U 1"
-    },
+    }
 }
