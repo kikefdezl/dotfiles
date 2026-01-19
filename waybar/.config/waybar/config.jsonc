@@ -8,7 +8,7 @@
     // "output": ["eDP-1", "DP-1"],
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/spotify", "tray", "pulseaudio", "bluetooth" ,"network", "battery"],
+    "modules-right": ["custom/spotify", "tray", "pulseaudio", "bluetooth" ,"network", "custom/vpn", "battery"],
     "clock": {
         "format": "{:%d-%b %H:%M}",
         "tooltip": false,
@@ -41,17 +41,12 @@
         "tooltip-format-connected": "{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
     },
-    "network": {
-        "format": "{icon}",
-        "format-alt": "{ipaddr}/{cidr} {icon}",
-        "format-alt-click": "click-right",
-        "format-icons": {
-            "wifi": ["", "" ,""],
-            "ethernet": [""],
-            "disconnected": ["⌔"]
-        },
-        "on-click": "nmtui",
-    "tooltip": false
+    "custom/spotify": {
+        "interval": 5,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/spotify.sh",
+        "exec-if": "pgrep spotify",
+        "escape": true
     },
     "pulseaudio": {
         "format": "{icon}",
@@ -66,11 +61,22 @@
         "tooltip": true,
         "tooltip-format": "{volume}%"
     },
-    "custom/spotify": {
-        "interval": 1,
+    "network": {
+        "format": "{icon}",
+        "format-alt": "{ipaddr}/{cidr} {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": {
+            "wifi": ["", "" ,""],
+            "ethernet": [""],
+            "disconnected": ["⌔"]
+        },
+        "on-click": "nmtui",
+    "tooltip": false
+    },
+    "custom/vpn": {
+        "interval": 30,
         "return-type": "json",
-        "exec": "~/.config/waybar/modules/spotify.sh",
-        "exec-if": "pgrep spotify",
+        "exec": "~/.config/waybar/modules/vpn.sh",
         "escape": true
     },
     "custom/storage": {
