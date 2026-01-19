@@ -74,15 +74,6 @@ stand(){
     fi
 }
 
-# --- PORT FORWARD ---
-port_forward_prod() {
-    ~/scripts/port_fwd_prod.sh
-}
-
-port_forward_services() {
-    ~/scripts/port_fwd_services.sh
-}
-
 # --- HEADPHONES / SPEAKERS ---
 change_to_audio_device() {
     local device_name="$1"
@@ -104,9 +95,17 @@ speakers() {
 }
 
 # --- VPN ---
-vpnup() {
-    nmcli connection up "robotise"
-}
-vpndown() {
-    nmcli connection down "robotise"
+vpn() {
+    case "$1" in
+        up)
+            nmcli connection up "robotise"
+            ;;
+        down)
+            nmcli connection down "robotise"
+            ;;
+        *)
+            echo "Error: Invalid argument. Usage: vpn [up|down]"
+            return 1
+            ;;
+    esac
 }
