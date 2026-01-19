@@ -1,14 +1,14 @@
 [global]
 monitor= 0
 follow = mouse
-width = (200, 250)
-height = (60, 120)
+width = (100, 500)
+height = (100, 400)
 offset = (60, 48)
 indicate_hidden = yes
 shrink = no
 separator_height = 0
-padding = 32
-horizontal_padding = 32
+padding = 24
+horizontal_padding = 24
 frame_width = 2
 sort = no
 idle_threshold = 120
