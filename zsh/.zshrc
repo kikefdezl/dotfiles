@@ -36,4 +36,5 @@ source ~/.zsh/functions.zsh
 # ==== gcloud ====
 __remove_gke(){ rm -f "$HOME/.kube/gke_gcloud_auth_plugin_cache" }
 gdev(){ __remove_gke && gcloud config configurations activate terraform-dev }
+gdevops(){ __remove_gke && gcloud config configurations activate kike-devops }
 gai(){ __remove_gke && gcloud config configurations activate tooling-ai }
