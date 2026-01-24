@@ -109,3 +109,52 @@ vpn() {
             ;;
     esac
 }
+
+# --- BLUETOOTH & HEADPHONES ---
+bluetooth() {
+    local mode=${1:-status}
+    
+    case $mode in
+        on|start|up)
+            sudo systemctl start bluetooth
+            echo "Bluetooth daemon started"
+            ;;
+        off|stop|down)
+            sudo systemctl stop bluetooth
+            echo "Bluetooth daemon stopped"
+            ;;
+        status)
+            systemctl is-active bluetooth && echo "Bluetooth: running" || echo "Bluetooth: stopped"
+            ;;
+        *)
+            echo "Usage: bluetooth [on|off|status]"
+            ;;
+    esac
+}
+
+export BT_MAC="80:C3:BA:3F:83:9F"
+
+momentum() {
+    local mode=$1
+    
+    case $mode in
+        on)
+            if ! bluetoothctl info $BT_MAC | grep -q "Connected: yes"; then
+                bluetoothctl connect $BT_MAC
+                sleep 1
+            fi
+            echo "Connected: MOMENTUM 4"
+            ;;
+        off)
+            if bluetoothctl info $BT_MAC | grep -q "Connected: yes"; then
+                bluetoothctl disconnect $BT_MAC
+            fi
+            echo "Disconnected Bluetooth"
+            ;;
+        *)
+            echo "Usage: momentum [on|off]"
+            echo "  on (default) - Connect to MOMENTUM 4"
+            echo "  off          - Disconnect MOMENTUM 4"
+            ;;
+    esac
+}
