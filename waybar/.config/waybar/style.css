@@ -43,15 +43,15 @@ window#waybar.solo {
     font-weight: 400
 }
 
+#custom-spotify{
+    margin: 0px 60px 0px 16px;
+    color: #A3BE8C;
+}
+
 #custom-vpn{
     color: #B48EAD;
     font-size: 12px;
     font-weight: 800
-}
-
-#custom-spotify{
-    margin: 0px 60px 0px 16px;
-    color: #A3BE8C;
 }
 
 #battery.warning {
