@@ -1,8 +1,10 @@
 * {
-    font-family: TX-02-Variable;
+    font-family: "TX-02 Variable", "Symbols Nerd Font", monospace;
+    /*  TODO: Not sure why this feature settings is not working */
+    font-feature-settings: "ss02";  
     font-size: 18px;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
 }
 
 window {
