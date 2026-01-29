@@ -12,23 +12,6 @@
         "format": "{:%d-%b %H:%M}",
         "tooltip": false,
     },
-    "battery": {
-        "format": "{icon}",
-        "format-alt": "{icon}",
-        "format-icons": {
-            "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-            "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
-        },
-        "interval": 30,
-        "states": {
-            "full": 99,
-            "good": 95, 
-            "warning": 30,
-            "critical": 15
-        },
-        "tooltip": true,
-        "tooltip-format": "{capacity}%",
-    },
     "bluetooth": {
       "format": "󰂯",
       "format-off": "",
@@ -81,12 +64,21 @@
         "exec": "~/.config/waybar/modules/vpn.sh",
         "escape": true
     },
-    "backlight": {
+    "battery": {
         "format": "{icon}",
-        "format-alt": "{percent}% {icon}",
-        "format-alt-click": "click-right",
-        "format-icons": ["", ""],
-        "on-scroll-down": "light -A 1",
-        "on-scroll-up": "light -U 1"
+        "format-alt": "{icon}",
+        "format-icons": {
+            "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+            "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+        },
+        "interval": 30,
+        "states": {
+            "full": 99,
+            "good": 95, 
+            "warning": 30,
+            "critical": 15
+        },
+        "tooltip": true,
+        "tooltip-format": "{capacity}%",
     }
 }

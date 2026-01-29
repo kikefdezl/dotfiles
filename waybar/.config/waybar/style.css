@@ -41,16 +41,22 @@ window#waybar.solo {
 }
 
 #mode, #battery, #cpu, #memory, #bluetooth, #network, #backlight, #custom-storage, #custom-spotify, #custom-mail, #pulseaudio, #tray {
-    margin:      0px 0px 0px 16px;
-    padding:     0px 2px;
+    margin: 0px 0px 0px 16px;
+    padding: 0px 2px;
     min-width:   25px;
-    font-size:   18px;
     font-weight: 400
 }
+
 
 #custom-spotify{
     margin: 0px 60px 0px 16px;
     color: #A3BE8C;
+}
+
+
+#pulseaudio {
+    font-size: 16px;
+    margin-right: 4px;
 }
 
 #network.disconnected {
