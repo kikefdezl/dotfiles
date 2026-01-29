@@ -15,8 +15,11 @@
     "battery": {
         "format": "{icon}",
         "format-alt": "{icon}",
-        "format-icons": ["", "", "", "", ""],
-        "interval": 60,
+        "format-icons": {
+            "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+            "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+        },
+        "interval": 30,
         "states": {
             "full": 99,
             "good": 95, 
