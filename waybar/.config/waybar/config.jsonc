@@ -51,10 +51,10 @@
         "format": "{icon}",
         "format-alt": "{icon}{volume: >3}%",
         "format-alt-click": "click-right",
-        "format-muted": " muted",
         "format-icons": {
             "default": ["", "", ""]
         },
+        "format-muted": "",
         "scroll-step": 10,
         "on-click": "wiremix --tab output",
         "tooltip": true,
