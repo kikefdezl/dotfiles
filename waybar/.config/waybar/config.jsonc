@@ -18,11 +18,13 @@
         "format-icons": ["", "", "", "", ""],
         "interval": 60,
         "states": {
-            "warning": 25,
-            "critical": 10
+            "full": 99,
+            "good": 95, 
+            "warning": 30,
+            "critical": 15
         },
         "tooltip": true,
-        "tooltip-format": "{capacity}%"
+        "tooltip-format": "{capacity}%",
     },
     "bluetooth": {
       "format": "󰂯",

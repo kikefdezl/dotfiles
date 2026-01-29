@@ -54,22 +54,14 @@ window#waybar.solo {
     font-weight: 800
 }
 
+#battery.charging:not(.full) {
+    color:      #A3BE8C;
+}
+
 #battery.warning {
-   color:       rgba(255, 210, 4, 1);
+   color:       #EBCB8B;
 }
 
 #battery.critical {
-    color:      rgba(238, 46, 36, 1);
-}
-
-#battery.charging {
-    color:      rgba(217, 216, 216, 1);
-}
-
-#custom-storage.warning {
-    color:      rgba(255, 210, 4, 1);
-}
-
-#custom-storage.critical {
-    color:      rgba(238, 46, 36, 1);
+    color:      #BF616A;
 }
