@@ -143,13 +143,23 @@ momentum() {
                 bluetoothctl connect $BT_MAC
                 sleep 1
             fi
-            echo "Connected: MOMENTUM 4"
+            if bluetoothctl info $BT_MAC | grep -q "Connected: yes"; then
+                echo "Connected: MOMENTUM 4"
+            else
+                echo "Failed to connect to MOMENTUM 4" >&2
+                return 1
+            fi
             ;;
         off)
             if bluetoothctl info $BT_MAC | grep -q "Connected: yes"; then
                 bluetoothctl disconnect $BT_MAC
             fi
-            echo "Disconnected Bluetooth"
+            if ! bluetoothctl info $BT_MAC | grep -q "Connected: yes"; then
+                echo "Disconnected: MOMENTUM 4"
+            else
+                echo "Failed to disconnect" >&2
+                return 1
+            fi
             ;;
         *)
             echo "Usage: momentum [on|off]"
