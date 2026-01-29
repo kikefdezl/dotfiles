@@ -48,6 +48,10 @@ window#waybar.solo {
     color: #A3BE8C;
 }
 
+#network.disconnected {
+   color:       #EBCB8B;
+}
+
 #custom-vpn{
     color: #B48EAD;
     font-size: 12px;
