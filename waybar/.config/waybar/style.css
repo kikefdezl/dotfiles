@@ -32,7 +32,7 @@ window#waybar.solo {
 }
 
 #workspaces button.visible label {
-    color: #d08770;
+    color: #D08770;
 }
 
 #clock {
@@ -47,6 +47,12 @@ window#waybar.solo {
     font-weight: 400
 }
 
+#custom-keystats{
+    margin: 0px 500px 0px 16px;
+    color: #81a1c1;
+    font-weight: 600;
+    font-size: 12px;
+}
 
 #custom-spotify{
     margin: 0px 60px 0px 16px;

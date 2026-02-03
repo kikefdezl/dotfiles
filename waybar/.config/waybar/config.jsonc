@@ -7,7 +7,7 @@
     "margin-bottom": -10,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/spotify", "tray", "pulseaudio", "bluetooth" ,"network", "custom/vpn", "battery"],
+    "modules-right": ["custom/keystats", "custom/spotify", "tray", "pulseaudio", "bluetooth" ,"network", "custom/vpn", "battery"],
     "clock": {
         "format": "{:%d-%b %H:%M}",
         "tooltip": false,
@@ -21,6 +21,12 @@
       "tooltip-format-connected": "{device_enumerate}",
       "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
       "on-click": "blueman-manager"
+    },
+    "custom/keystats": {
+        "interval": 600,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/keystats.sh",
+        "escape": true
     },
     "custom/spotify": {
         "interval": 5,
