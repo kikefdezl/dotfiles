@@ -27,10 +27,6 @@ window#waybar.solo {
     color: rgba(217, 216, 216, 0.4);  /* #d9d8d8 */
 }
 
-#workspaces button label {
-    font-weight: 600;
-}
-
 #workspaces button.visible label {
     color: #D08770;
 }

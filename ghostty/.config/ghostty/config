@@ -21,6 +21,6 @@ font-style-italic = Book SemiCondensed Oblique
 font-style-bold = SemiBold SemiCondensed
 font-style-bold-italic = SemiBold SemiCondensed Oblique
 font-feature = ss01
-font-size = 14
+font-size = 13
 
 command=tmux
