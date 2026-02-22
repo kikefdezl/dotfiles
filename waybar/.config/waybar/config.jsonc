@@ -23,7 +23,7 @@
       "on-click": "blueman-manager"
     },
     "custom/keystats": {
-        "interval": 600,
+        "interval": 60,
         "return-type": "json",
         "exec": "~/.config/waybar/modules/keystats.sh",
         "escape": true
