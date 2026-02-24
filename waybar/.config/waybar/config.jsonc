@@ -79,8 +79,8 @@
         },
         "interval": 30,
         "states": {
-            "full": 99,
-            "good": 95, 
+            "full": 100,
+            "good": 98,
             "warning": 30,
             "critical": 15
         },
