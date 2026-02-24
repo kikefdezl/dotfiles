@@ -16,7 +16,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # ==== options ====
-
 unsetopt autocd # unsets writing a folder name to auto `cd` into it. I don't like this because it conflicts if you have a binary with the same name
 
 bindkey '^p' up-line-or-beginning-search
