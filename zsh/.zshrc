@@ -5,7 +5,7 @@ export ZSH="$HOME/.oh-my-zsh"
 if [ $HOST = "pi" ]; then
     ZSH_THEME="mrtazz"
 else
-    ZSH_THEME="kafeitu"
+    ZSH_THEME="kafeitu-nordic"
 fi
 
 plugins=( git z )
