@@ -11,6 +11,7 @@ if [[ $HOSTNAME == "arch-desktop" ]]; then
   stow --target "$HOME" k9s
   stow --target "$HOME" -d hypr common desktop
   stow --target "$HOME" mltop
+  stow --target "$HOME" opencode
   stow --target "$HOME" waybar
   stow --target "$HOME" wofi
   stow --target "$HOME" yazi
@@ -34,26 +35,27 @@ fi
 
 # acer laptop
 if [[ $HOSTNAME == "archcer" ]]; then
-  stow --target "$HOME" zsh
   stow --target "$HOME" ghostty
-  stow --target "$HOME" tmux
   stow --target "$HOME" hypr
+  stow --target "$HOME" mltop
+  stow --target "$HOME" tmux
   stow --target "$HOME" waybar
   stow --target "$HOME" wofi
   stow --target "$HOME" yazi
-  stow --target "$HOME" mltop
+  stow --target "$HOME" zsh
 fi
 
 # thinkpad-t14s
 if [[ $HOSTNAME == "kike-thinkpad-t14s" ]]; then
   stow --target "$HOME" dunst
   stow --target "$HOME" ghostty
-  stow --target "$HOME" tmux
   stow --target "$HOME" -d hypr common laptop
+  stow --target "$HOME" k9s
+  stow --target "$HOME" opencode
+  stow --target "$HOME" tmux
   stow --target "$HOME" waybar
   stow --target "$HOME" wofi
   stow --target "$HOME" mltop
-  stow --target "$HOME" k9s
   stow --target "$HOME" yazi
   stow --target "$HOME" zsh
 fi
