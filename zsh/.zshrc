@@ -25,6 +25,7 @@ source ~/.zsh/aliases.zsh
 
 # ==== envvars ====
 export EDITOR="nvim"
+export GOOGLE_APPLICATION_CREDENTIALS="/home/kike/.gcp/tooling-ai.json"
 
 # ==== tokens ====
 [ -f ~/.tokens ] && source ~/.tokens  # loads the .tokens file, which exports envvars with sensitive tokens
