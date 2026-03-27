@@ -65,10 +65,17 @@ window#waybar.solo {
    color:       #EBCB8B;
 }
 
-#custom-vpn{
-    color: #B48EAD;
+#custom-vpn {
     font-size: 12px;
-    font-weight: 800
+    font-weight: 800;
+}
+
+#custom-vpn.robotise {
+    color: #81A1C1;
+}
+
+#custom-vpn.proton {
+    color: #D08770;
 }
 
 #battery.full {

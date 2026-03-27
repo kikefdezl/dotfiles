@@ -1,10 +1,11 @@
 #!/bin/sh
 
-VPN_NAME="robotise"
+ACTIVE_CONNECTIONS=$(nmcli -t -f NAME,TYPE connection show --active)
 
-if nmcli -t -f NAME,TYPE connection show --active \
-   | grep -q "^$VPN_NAME:vpn$"; then
-    echo '{"text":" VPN","class":"vpn-up"}'
+if echo "$ACTIVE_CONNECTIONS" | grep -iq "robotise.*"; then
+    echo '{"text":" VPN","class":"robotise"}'
+elif echo "$ACTIVE_CONNECTIONS" | grep -iq "Proton.*"; then
+    echo '{"text":" VPN","class":"proton"}'
 else
     echo '{"text":"","class":"vpn-down"}'
 fi

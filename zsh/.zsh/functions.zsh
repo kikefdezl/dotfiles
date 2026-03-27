@@ -102,7 +102,18 @@ speakers() {
 vpn() {
     case "$1" in
         up)
-            nmcli connection up "robotise"
+            case "$2" in
+                robotise)
+                    nmcli connection up "robotise"
+                    ;;
+                proton)
+                    protonvpn connect
+                    ;;
+                *)
+                    echo "Error: Invalid argument. Usage: vpn up [robotise|proton]"
+                    return 1
+                    ;;
+            esac
             ;;
         down)
             nmcli connection down "robotise"
