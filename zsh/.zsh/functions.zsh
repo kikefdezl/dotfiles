@@ -116,7 +116,13 @@ vpn() {
             esac
             ;;
         down)
-            nmcli connection down "robotise"
+            if nmcli connection show --active | grep -q "robotise"; then
+                nmcli connection down "robotise"
+            elif nmcli connection show --active | grep -q "Proton"; then
+                protonvpn disconnect
+            else
+                echo "No active VPN connection found."
+            fi
             ;;
         *)
             echo "Error: Invalid argument. Usage: vpn [up|down]"
