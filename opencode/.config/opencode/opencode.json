@@ -1,27 +1,28 @@
 {
-       "$schema": "https://opencode.ai/config.json",
-       "permission": {
-              "bash": {
-                     "git commit": "deny",
-                     "git commit *": "deny",
-                     "git add": "deny",
-                     "git add *": "deny",
-                     "terraform apply": "deny",
-                     "terraform apply *": "deny",
-                     "tf apply": "deny",
-                     "tf apply *": "deny",
-                     "gcloud": "ask",
-                     "gcloud *": "ask"
-              }
-       },
-       "provider": {
-              "google-vertex": {
-                     "options": {
-                            "headers": {
-                                   "X-Vertex-AI-LLM-Request-Type": "shared",
-                                   "X-Vertex-AI-LLM-Shared-Request-Type": "priority"
-                            }
-                     }
-              }
-       }
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "bash": {
+      "git commit": "deny",
+      "git commit *": "deny",
+      "git add": "deny",
+      "git add *": "deny",
+      "terraform apply": "deny",
+      "terraform apply *": "deny",
+      "tf apply": "deny",
+      "tf apply *": "deny",
+      "gcloud": "ask",
+      "gcloud *": "ask"
+    }
+  },
+  "provider": {
+    "google-vertex": {
+      "options": {
+        "headers": {
+          "X-Vertex-AI-LLM-Request-Type": "shared",
+          "X-Vertex-AI-LLM-Shared-Request-Type": "priority"
+        }
+      }
+    }
+  }
 }
+
