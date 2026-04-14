@@ -30,7 +30,7 @@ browser = /usr/bin/firefox -new-tab
 always_run_script = true
 title = Dunst
 class = Dunst
-corner_radius = 10
+corner_radius = 0
 progress_bar = true
 highlight = "#d08770"
 
