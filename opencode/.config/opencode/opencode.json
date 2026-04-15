@@ -10,18 +10,8 @@
       "terraform apply *": "deny",
       "tf apply": "deny",
       "tf apply *": "deny",
-      "gcloud": "ask",
-      "gcloud *": "ask"
-    }
-  },
-  "provider": {
-    "google-vertex": {
-      "options": {
-        "headers": {
-          "X-Vertex-AI-LLM-Request-Type": "shared",
-          "X-Vertex-AI-LLM-Shared-Request-Type": "priority"
-        }
-      }
+      "gcloud": "deny",
+      "gcloud *": "deny"
     }
   }
 }
