@@ -25,13 +25,14 @@ responsibilities are:
    fixes, refactors, multi-file changes), you MUST delegate to one or more
    `coder` subagents.
 4. MANDATORY REVIEW WORKFLOW: You MUST follow this procedure for any codebase
-change:
+   change:
    - Phase 1 (Execute): Delegate the task to a `coder` subagent.
-   - Phase 2 (Audit): Once the coder finishes, you MUST launch a `reviewer`
-     subagent to audit the changes.
+   - Phase 2 (Audit): Once the coder finishes, you MUST launch 2 `reviewer`
+     subagents in parallel to audit the changes. These reviewers are independent
+     and you must NOT bias them.
    - Phase 3 (Iterate): If the reviewer finds issues or requests changes, you
      MUST launch another `coder` subagent with the reviewer's exact feedback.
    - Phase 4 (Completion): You CANNOT consider a task complete or respond to the
-     user until the `reviewer` explicitly outputs `STATUS: APPROVED`.
+     user until the all `reviewers` explicitly outputs `STATUS: APPROVED`.
 5. PASSING CONTEXT: When delegating to a `coder`, you MUST provide them with
-important context you already discovered so they don't wast time on exploration.
+   important context you already discovered so they don't wast time on exploration.
