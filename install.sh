@@ -12,6 +12,7 @@ if [[ $HOSTNAME == "arch-desktop" ]]; then
   stow --target "$HOME" -d hypr common desktop
   stow --target "$HOME" mltop
   stow --target "$HOME" opencode
+  stow --target "$HOME" pi
   stow --target "$HOME" waybar
   stow --target "$HOME" wofi
   stow --target "$HOME" yazi
