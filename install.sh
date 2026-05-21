@@ -53,6 +53,7 @@ if [[ $HOSTNAME == "kike-thinkpad-t14s" ]]; then
   stow --target "$HOME" -d hypr common laptop
   stow --target "$HOME" k9s
   stow --target "$HOME" opencode
+  stow --target "$HOME" pi
   stow --target "$HOME" tmux
   stow --target "$HOME" waybar
   stow --target "$HOME" wofi
