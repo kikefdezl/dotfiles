@@ -35,6 +35,6 @@ source ~/.zsh/functions.zsh
 
 # ==== gcloud ====
 __remove_gke(){ rm -f "$HOME/.kube/gke_gcloud_auth_plugin_cache" }
-gdev(){ __remove_gke && gcloud config configurations activate kike-sa-dev }
+gdev(){ __remove_gke && gcloud config configurations activate kike-dev }
 gprod(){ __remove_gke && gcloud config configurations activate kike-sa-prod }
 gdevops(){ __remove_gke && gcloud config configurations activate kike-devops }
