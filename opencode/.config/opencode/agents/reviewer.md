@@ -1,6 +1,7 @@
 ---
 description: Reviews the coders' work against repo guidelines.
 mode: subagent
+model: google/gemini-3.5-flash
 permission:
   edit: deny
 tools:
