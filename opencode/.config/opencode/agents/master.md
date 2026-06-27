@@ -6,6 +6,7 @@ permission:
     "*": deny
     coder: allow
     reviewer: allow
+    research: allow
 ---
 
 You are the master agent, a high-level orchestrator and software architect. An
