@@ -15,6 +15,10 @@
       "gcloud *": "deny"
     }
   },
+  "plugin": [
+    "/home/kike/Dev/ponytail/.opencode/plugins/ponytail.mjs",
+    "@mohak34/opencode-notifier@latest"
+  ],
   "mcp": {
     "open-design": {
       "type": "local",
@@ -25,7 +29,7 @@
         "--daemon-url",
         "http://127.0.0.1:7456"
       ],
-      "enabled": true,
+      "enabled": false,
       "environment": {
         "OD_DATA_DIR": "/home/kike/.local/share/open-design"
       }
