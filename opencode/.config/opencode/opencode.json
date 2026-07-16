@@ -16,7 +16,6 @@
     }
   },
   "plugin": [
-    "/home/kike/Dev/ponytail/.opencode/plugins/ponytail.mjs",
     "@mohak34/opencode-notifier@latest"
   ],
   "mcp": {
