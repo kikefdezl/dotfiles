@@ -155,59 +155,16 @@ bluetooth() {
 
 export MOMENTUM_BT_MAC="80:C3:BA:3F:83:9F"
 
-# TODO: Go back to CLI when they fix the bug:
-# https://github.com/bluez/bluez/issues/1896
-# For now, forcing interactive mode with the alternative below
-#
-# momentum() {
-#     local mode=$1
-#     
-#     case $mode in
-#         on)
-#             if ! bluetoothctl info $MOMENTUM_BT_MAC | grep -q "Connected: yes"; then
-#                 bluetoothctl connect $MOMENTUM_BT_MAC
-#                 sleep 1
-#             fi
-#             if bluetoothctl info $MOMENTUM_BT_MAC | grep -q "Connected: yes"; then
-#                 echo "Connected: MOMENTUM 4"
-#             else
-#                 echo "Failed to connect to MOMENTUM 4" >&2
-#                 return 1
-#             fi
-#             ;;
-#         off)
-#             if bluetoothctl info $MOMENTUM_BT_MAC | grep -q "Connected: yes"; then
-#                 bluetoothctl disconnect $MOMENTUM_BT_MAC
-#             fi
-#             if ! bluetoothctl info $MOMENTUM_BT_MAC | grep -q "Connected: yes"; then
-#                 echo "Disconnected: MOMENTUM 4"
-#             else
-#                 echo "Failed to disconnect" >&2
-#                 return 1
-#             fi
-#             ;;
-#         *)
-#             echo "Usage: momentum [on|off]"
-#             echo "  on (default) - Connect to MOMENTUM 4"
-#             echo "  off          - Disconnect MOMENTUM 4"
-#             ;;
-#     esac
-# }
-
 momentum() {
     local mode=$1
-
-    bt_info() {
-        echo "info $MOMENTUM_BT_MAC" | bluetoothctl
-    }
-
+    
     case $mode in
         on)
-            if ! bt_info | grep -q "Connected: yes"; then
+            if ! bluetoothctl info $MOMENTUM_BT_MAC | grep -q "Connected: yes"; then
                 bluetoothctl connect $MOMENTUM_BT_MAC
                 sleep 1
             fi
-            if bt_info | grep -q "Connected: yes"; then
+            if bluetoothctl info $MOMENTUM_BT_MAC | grep -q "Connected: yes"; then
                 echo "Connected: MOMENTUM 4"
             else
                 echo "Failed to connect to MOMENTUM 4" >&2
@@ -215,10 +172,10 @@ momentum() {
             fi
             ;;
         off)
-            if bt_info | grep -q "Connected: yes"; then
+            if bluetoothctl info $MOMENTUM_BT_MAC | grep -q "Connected: yes"; then
                 bluetoothctl disconnect $MOMENTUM_BT_MAC
             fi
-            if ! bt_info | grep -q "Connected: yes"; then
+            if ! bluetoothctl info $MOMENTUM_BT_MAC | grep -q "Connected: yes"; then
                 echo "Disconnected: MOMENTUM 4"
             else
                 echo "Failed to disconnect" >&2
@@ -227,8 +184,8 @@ momentum() {
             ;;
         *)
             echo "Usage: momentum [on|off]"
-            echo "  on  - Connect to MOMENTUM 4"
-            echo "  off - Disconnect MOMENTUM 4"
+            echo "  on (default) - Connect to MOMENTUM 4"
+            echo "  off          - Disconnect MOMENTUM 4"
             ;;
     esac
 }
