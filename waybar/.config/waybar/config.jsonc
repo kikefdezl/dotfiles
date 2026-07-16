@@ -76,7 +76,7 @@
             "full": 100,
             "good": 98,
             "warning": 30,
-            "critical": 15
+            "critical": 10
         },
         "tooltip": true,
         "tooltip-format": "{capacity}%",
