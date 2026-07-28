@@ -1,7 +1,7 @@
 require("monitors")
 
 local terminal = "ghostty"
-local file_manager = "yazi"
+local file_manager = terminal .. " -e yazi"
 local menu = "wofi --show drun"
 local browser = "zen-browser"
 
@@ -14,9 +14,14 @@ hl.workspace_rule({
 	workspace = "2",
 	monitor = MONITORS.MAIN,
 	default = true,
-	on_created_empty = terminal .. "-e" .. file_manager,
+	on_created_empty = file_manager,
 })
-hl.workspace_rule({ workspace = "3", monitor = MONITORS.SECONDARY, default = true, on_created_empty = "mattermost-desktop" })
+hl.workspace_rule({
+	workspace = "3",
+	monitor = MONITORS.SECONDARY,
+	default = true,
+	on_created_empty = "mattermost-desktop",
+})
 hl.workspace_rule({ workspace = "5", monitor = MONITORS.MAIN, default = true, on_created_empty = "spotify-launcher" }) -- for TUI: `ghostty -e spotify_player`
 hl.workspace_rule({
 	workspace = "6",
