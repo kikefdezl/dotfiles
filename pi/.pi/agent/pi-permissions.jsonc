@@ -7,6 +7,9 @@
     "special": "ask"
   },
   "bash": {
+    "*": "allow",
+    "*../*": "ask",
+    "*cd ..*": "ask",
     "git commit": "deny",
     "git commit *": "deny",
     "git add": "deny",
