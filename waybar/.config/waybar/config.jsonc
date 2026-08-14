@@ -59,7 +59,7 @@
     "tooltip": false
     },
     "custom/vpn": {
-        "interval": 30,
+        "interval": 20,
         "return-type": "json",
         "exec": "~/.config/waybar/modules/vpn.sh",
         "escape": true
