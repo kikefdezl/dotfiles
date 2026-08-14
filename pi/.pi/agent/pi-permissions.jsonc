@@ -1,0 +1,21 @@
+{
+  "defaultPolicy": {
+    "tools": "ask",
+    "bash": "ask",
+    "mcp": "ask",
+    "skills": "ask",
+    "special": "ask"
+  },
+  "bash": {
+    "git commit": "deny",
+    "git commit *": "deny",
+    "git add": "deny",
+    "git add *": "deny",
+    "terraform apply": "deny",
+    "terraform apply *": "deny",
+    "tf apply": "deny",
+    "tf apply *": "deny",
+    "gcloud": "deny",
+    "gcloud *": "deny"
+  }
+}

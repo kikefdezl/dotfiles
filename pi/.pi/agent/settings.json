@@ -1,0 +1,11 @@
+{
+  "lastChangelogVersion": "0.84.1",
+  "theme": "dark",
+  "defaultProvider": "google",
+  "defaultModel": "gemini-3.1-pro-preview",
+  "defaultThinkingLevel": "high",
+  "packages": [
+    "npm:pi-permission-system",
+    "npm:pi-subagents"
+  ]
+}
