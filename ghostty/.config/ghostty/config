@@ -23,4 +23,4 @@ font-style-bold-italic = SemiBold SemiCondensed Oblique
 font-feature = ss01
 font-size = 16
 
-command=tmux
+command=herdr
