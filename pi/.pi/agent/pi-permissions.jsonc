@@ -1,10 +1,16 @@
 {
   "defaultPolicy": {
-    "tools": "ask",
+    "tools": "allow",
     "bash": "ask",
     "mcp": "ask",
     "skills": "ask",
     "special": "ask"
+  },
+  "tools": {
+    "*": "allow"
+  },
+  "special": {
+    "external_directory": "ask"
   },
   "bash": {
     "*": "allow",

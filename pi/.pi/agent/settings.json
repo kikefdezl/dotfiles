@@ -1,8 +1,8 @@
 {
-  "lastChangelogVersion": "0.84.1",
+  "lastChangelogVersion": "0.84.2",
   "theme": "dark",
   "defaultProvider": "google",
-  "defaultModel": "gemini-3.1-pro-preview",
+  "defaultModel": "gemini-3.7-flash",
   "defaultThinkingLevel": "high",
   "packages": [
     "npm:pi-permission-system",
