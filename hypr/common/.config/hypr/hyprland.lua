@@ -160,9 +160,8 @@ for i = 1, 10 do
 	hl.bind(main_mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
--- TODO: fix -- Move active window to a monitor L - R
--- hl.bind("CTRL + ALT + " .. main_mod .. " + SHIFT + L", hl.dsp.workspace.move({ direction = "right" }))
--- hl.bind("CTRL + ALT + " .. main_mod .. " + SHIFT + H", hl.dsp.workspace.move({ direction = "left" }))
+hl.bind("CTRL + ALT + " .. main_mod .. " + SHIFT + 1", hl.dsp.workspace.move({ monitor = MONITORS.MAIN }))
+hl.bind("CTRL + ALT + " .. main_mod .. " + SHIFT + 2", hl.dsp.workspace.move({ monitor = MONITORS.SECONDARY}))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(main_mod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
