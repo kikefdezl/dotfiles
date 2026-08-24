@@ -6,6 +6,7 @@
   "defaultThinkingLevel": "high",
   "packages": [
     "npm:pi-permission-system",
-    "npm:pi-subagents"
+    "npm:pi-subagents",
+    "npm:pi-web-access"
   ]
 }
