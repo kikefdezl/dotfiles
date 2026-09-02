@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.84.2",
+  "lastChangelogVersion": "0.84.4",
   "theme": "dark",
   "defaultProvider": "google",
   "defaultModel": "gemini-3.7-flash",
@@ -8,5 +8,6 @@
     "npm:pi-permission-system",
     "npm:pi-subagents",
     "npm:pi-web-access"
-  ]
+  ],
+  "hideThinkingBlock": true
 }

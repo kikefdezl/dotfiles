@@ -1,4 +1,7 @@
 auth.json
 npm/
 sessions/
+missions/
 models-store.json
+run-history.jsonl
+
