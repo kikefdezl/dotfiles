@@ -1,13 +1,13 @@
 {
-  "lastChangelogVersion": "0.84.4",
+  "lastChangelogVersion": "0.85.1",
   "theme": "dark",
   "defaultProvider": "google",
-  "defaultModel": "gemini-3.7-flash",
+  "defaultModel": "gemini-3.8-flash",
   "defaultThinkingLevel": "high",
   "packages": [
     "npm:pi-permission-system",
     "npm:pi-subagents",
     "npm:pi-web-access"
   ],
-  "hideThinkingBlock": true
+  "hideThinkingBlock": false
 }
