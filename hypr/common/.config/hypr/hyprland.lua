@@ -160,8 +160,8 @@ for i = 1, 10 do
 	hl.bind(main_mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
-hl.bind("CTRL + ALT + " .. main_mod .. " + SHIFT + 1", hl.dsp.workspace.move({ monitor = MONITORS.MAIN }))
-hl.bind("CTRL + ALT + " .. main_mod .. " + SHIFT + 2", hl.dsp.workspace.move({ monitor = MONITORS.SECONDARY }))
+hl.bind("CTRL + ALT + " .. main_mod .. " + 1", hl.dsp.workspace.move({ monitor = MONITORS.MAIN }))
+hl.bind("CTRL + ALT + " .. main_mod .. " + 2", hl.dsp.workspace.move({ monitor = MONITORS.SECONDARY}))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(main_mod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
