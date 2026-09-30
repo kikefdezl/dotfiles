@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.85.1",
+  "lastChangelogVersion": "0.99.1",
   "theme": "dark",
   "defaultProvider": "google",
   "defaultModel": "gemini-3.8-flash",
