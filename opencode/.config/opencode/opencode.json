@@ -18,21 +18,5 @@
   },
   "plugin": [
     "@mohak34/opencode-notifier@latest"
-  ],
-  "mcp": {
-    "open-design": {
-      "type": "local",
-      "command": [
-        "/usr/bin/node",
-        "/usr/lib/open-design/apps/daemon/dist/cli.js",
-        "mcp",
-        "--daemon-url",
-        "http://127.0.0.1:7456"
-      ],
-      "enabled": false,
-      "environment": {
-        "OD_DATA_DIR": "/home/kike/.local/share/open-design"
-      }
-    }
-  }
+  ]
 }
