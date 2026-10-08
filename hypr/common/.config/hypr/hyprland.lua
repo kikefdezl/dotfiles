@@ -73,6 +73,11 @@ hl.config({
 		rounding_power = 2,
 		active_opacity = 1.0,
 		inactive_opacity = 1.0,
+		dim_inactive = true,
+		dim_strength = 0.2,
+		motion_blur = {
+			enabled = false,
+		},
 		shadow = {
 			enabled = true,
 			range = 4,
@@ -80,7 +85,7 @@ hl.config({
 			color = "rgba(1a1a1aee)",
 		},
 		blur = {
-			enabled = true,
+			enabled = false,
 			size = 5,
 			passes = 2,
 			vibrancy = 0.1696,
@@ -161,7 +166,7 @@ for i = 1, 10 do
 end
 
 hl.bind("CTRL + ALT + " .. main_mod .. " + 1", hl.dsp.workspace.move({ monitor = MONITORS.MAIN }))
-hl.bind("CTRL + ALT + " .. main_mod .. " + 2", hl.dsp.workspace.move({ monitor = MONITORS.SECONDARY}))
+hl.bind("CTRL + ALT + " .. main_mod .. " + 2", hl.dsp.workspace.move({ monitor = MONITORS.SECONDARY }))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(main_mod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
