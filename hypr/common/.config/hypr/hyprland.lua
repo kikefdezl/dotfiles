@@ -68,6 +68,12 @@ hl.config({
 		layout = "dwindle",
 	},
 
+	master = {
+		orientation = "center",
+		new_status = "slave",
+		slave_count_for_center_master = 1,
+	},
+
 	decoration = {
 		rounding = 10,
 		rounding_power = 2,
@@ -99,12 +105,6 @@ hl.config({
 hl.config({
 	dwindle = {
 		preserve_split = true, -- You probably want this
-	},
-})
-
-hl.config({
-	master = {
-		new_status = "master",
 	},
 })
 
