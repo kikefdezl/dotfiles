@@ -1,4 +1,5 @@
 require("monitors")
+require("layout")
 
 local terminal = "ghostty"
 local file_manager = terminal .. " -e yazi"
@@ -65,13 +66,7 @@ hl.config({
 		},
 		resize_on_border = false,
 		allow_tearing = false,
-		layout = "dwindle",
-	},
-
-	master = {
-		orientation = "center",
-		new_status = "slave",
-		slave_count_for_center_master = 1,
+		no_focus_fallback = true,
 	},
 
 	decoration = {
@@ -99,12 +94,6 @@ hl.config({
 	},
 	animations = {
 		enabled = false,
-	},
-})
-
-hl.config({
-	dwindle = {
-		preserve_split = true, -- You probably want this
 	},
 })
 
