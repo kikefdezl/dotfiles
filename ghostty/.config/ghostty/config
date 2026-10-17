@@ -1,7 +1,7 @@
 # Reference: https://ghostty.org/docs/config.
 
 # appearance
-theme = nordic
+theme = Catppuccin Mocha
 background-opacity = 1.0
 resize-overlay = never
 window-width = 240
