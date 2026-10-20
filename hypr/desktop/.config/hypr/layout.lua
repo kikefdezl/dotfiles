@@ -7,6 +7,6 @@ hl.config({
 		orientation = "right",
 		new_status = "slave",
 		slave_count_for_center_master = 0,
-		mfact = 0.72,
+		mfact = 0.68,
 	},
 })
