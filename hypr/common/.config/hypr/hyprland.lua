@@ -10,28 +10,39 @@ local browser = "zen-browser"
 -- ### WORKSPACE RULES ###
 -- #######################
 
-hl.workspace_rule({ workspace = "1", monitor = MONITORS.MAIN, default = true, on_created_empty = browser })
-hl.workspace_rule({
-	workspace = "2",
-	monitor = MONITORS.MAIN,
-	default = true,
-	on_created_empty = file_manager,
-})
-hl.workspace_rule({
-	workspace = "3",
-	monitor = MONITORS.SECONDARY,
-	default = true,
-	on_created_empty = "mattermost-desktop",
-})
-hl.workspace_rule({ workspace = "5", monitor = MONITORS.MAIN, default = true, on_created_empty = "spotify-launcher" }) -- for TUI: `ghostty -e spotify_player`
-hl.workspace_rule({
-	workspace = "6",
-	monitor = MONITORS.MAIN,
-	default = true,
-	on_created_empty = "OBSIDIAN_USE_WAYLAND=1 obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland",
-})
-hl.workspace_rule({ workspace = "7", monitor = MONITORS.MAIN, default = true, on_created_empty = terminal })
-hl.workspace_rule({ workspace = "8", monitor = MONITORS.SECONDARY, default = true, on_created_empty = browser })
+hl.workspace_rule({ workspace = "1", monitor = MONITORS.MAIN, default = true })
+hl.workspace_rule({ workspace = "2", monitor = MONITORS.MAIN, default = true })
+hl.workspace_rule({ workspace = "3", monitor = MONITORS.SECONDARY, default = true })
+hl.workspace_rule({ workspace = "5", monitor = MONITORS.MAIN, default = true })
+hl.workspace_rule({ workspace = "6", monitor = MONITORS.MAIN, default = true })
+hl.workspace_rule({ workspace = "7", monitor = MONITORS.MAIN, default = true })
+hl.workspace_rule({ workspace = "8", monitor = MONITORS.SECONDARY, default = true })
+
+hl.on("workspace.created", function(ws)
+	if not ws.is_empty then
+		return
+	end
+
+	if ws.name == "1" then
+		cmd = browser
+	elseif ws.name == "2" then
+		cmd = file_manager
+	elseif ws.name == "3" then
+		cmd = "mattermost-desktop"
+	elseif ws.name == "5" then
+		cmd = "spotify-launcher" -- for TUI: `ghostty -e spotify_player`
+	elseif ws.name == "6" then
+		cmd = "OBSIDIAN_USE_WAYLAND=1 obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland"
+	elseif ws.name == "7" then
+		cmd = terminal
+	elseif ws.name == "8" then
+		cmd = browser
+	else
+		return
+	end
+
+	hl.exec_cmd(cmd, { workspace = ws.name })
+end)
 
 -- #################
 -- ### AUTOSTART ###
