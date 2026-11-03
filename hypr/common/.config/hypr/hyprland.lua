@@ -23,6 +23,7 @@ hl.on("workspace.created", function(ws)
 		return
 	end
 
+	local cmd
 	if ws.name == "1" then
 		cmd = browser
 	elseif ws.name == "2" then
