@@ -107,6 +107,9 @@ hl.config({
 	animations = {
 		enabled = false,
 	},
+	xwayland = {
+		force_zero_scaling = true,
+	},
 })
 
 -- #############
