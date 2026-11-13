@@ -3,7 +3,7 @@ require("layout")
 
 local terminal = "ghostty"
 local file_manager = terminal .. " -e yazi"
-local menu = "wofi --show drun"
+local launcher = "fuzzel"
 local browser = "zen-browser"
 
 -- #######################
@@ -152,7 +152,7 @@ hl.bind("ALT + F4", hl.dsp.window.close())
 -- hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(main_mod .. " + E", hl.dsp.exec_cmd(file_manager))
 hl.bind(main_mod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(main_mod .. " + O", hl.dsp.exec_cmd(menu))
+hl.bind(main_mod .. " + O", hl.dsp.exec_cmd(launcher))
 hl.bind(main_mod .. " + P", hl.dsp.window.pseudo())
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region --output-folder ~/Pictures/Screenshots"))
 
