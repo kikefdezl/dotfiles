@@ -204,3 +204,19 @@ fwd() {
       ;;
   esac
 }
+
+# --- GITLAB ---
+
+mrurl() {
+    glab mr list -Fjson --source-branch $(git rev-parse --abbrev-ref HEAD) |
+        jq '.[0].web_url' |
+        tr -d '"'
+}
+
+mrcopy() {
+    mrurl | wl-copy
+}
+
+mropen() {
+    xdg-open $(mrurl)
+}
