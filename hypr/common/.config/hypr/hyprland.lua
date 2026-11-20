@@ -110,6 +110,10 @@ hl.config({
 	xwayland = {
 		force_zero_scaling = true,
 	},
+
+	misc = {
+		focus_on_activate = true,
+	},
 })
 
 -- #############
