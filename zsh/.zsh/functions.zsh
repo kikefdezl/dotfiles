@@ -20,45 +20,6 @@ venv() {
     fi
 }
 
-# --- CDD ---
-# cdd <repo>: change to ~/Dev/<repo>
-# Allows me to change directory to one of my repos in ~/Dev from any path. Supports tab to autocomplete
-DEV_DIR="$HOME/Dev"
-cdd() {
-  if [[ -z "$1" ]]; then
-    cd -- "$DEV_DIR"
-    return
-  fi
-
-  # 1. Try exact match first
-  if [[ -d "$DEV_DIR/$1" ]]; then
-    cd -- "$DEV_DIR/$1"
-    return
-  fi
-
-  # 2. Fall back to substring match
-  local matches=()
-  for dir in "$DEV_DIR"/*(N/); do
-    [[ ${dir:t} == *"$1"* ]] && matches+=("$dir")
-  done
-
-  case ${#matches[@]} in
-    0) echo "No repo matching '*$1*' in $DEV_DIR" >&2; return 1 ;;
-    1) cd -- "${matches[1]}" ;;
-    *) 
-      echo "Multiple matches:" >&2
-      printf '  %s\n' "${matches[@]##*/}" >&2
-      return 1
-      ;;
-  esac
-}
-# ZSH tab-completion
-_cdd() {
-  # Use Zsh's built-in path completion scoped to DEV_DIR
-  _path_files -W "$DEV_DIR" -/
-}
-compdef _cdd cdd
-
 # --- SIT/STAND ---
 HOME_ASSISTANT_URL=http://192.168.1.203:8123
 sit() {
