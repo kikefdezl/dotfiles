@@ -30,24 +30,22 @@ browser = /usr/bin/firefox -new-tab
 always_run_script = true
 title = Dunst
 class = Dunst
-corner_radius = 0
+corner_radius = 10
 progress_bar = true
-highlight = "#d08770"
+separator_color = frame
+highlight = "#dc8a78"
+frame_color = "#dc8a78"
 
 [urgency_low]
 timeout = 4
-background = "#141c21"
-foreground = "#d8dee9"
-frame_color = "#d08770"
+background = "#1e1e2e"
+foreground = "#cdd6f4"
 
 [urgency_normal]
-timeout = 8
-background = "#141c21"
-foreground = "#d8dee9"
-frame_color = "#d08770"
+background = "#1e1e2e"
+foreground = "#cdd6f4"
 
 [urgency_critical]
-timeout = 0
-background = "#141c21c"
-foreground = "#93a1a1"
-frame_color = "#d06f79"
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+frame_color = "#fab387"
