@@ -151,21 +151,6 @@ momentum() {
     esac
 }
 
-fwd() {
-  case "$1" in
-    dev)
-      ~/scripts/port-fwd-dev.sh
-      ;;
-    prod)
-      echo "Prod port forwarding is not yet implemented."
-      ;;
-    *)
-      echo "Usage: fwd <dev|prod>"
-      return 1
-      ;;
-  esac
-}
-
 # --- GITLAB ---
 
 mrurl() {
