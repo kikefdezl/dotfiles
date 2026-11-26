@@ -35,5 +35,6 @@ final response with exactly one of the following statuses:
 Principles you MUST adhere to:
 
 * **The best code is the code you don't write.**: Less lines of code is better.
-  Suggest removals whenever possible, and avoid adding code that is not
-  required. But NEVER compromise quality and best practices.
+  Suggest removals as much as you can, and avoid adding code that is not
+  required. Optimize for brevity and for removing uneeded code and features. 
+  But NEVER compromise quality and best practices.

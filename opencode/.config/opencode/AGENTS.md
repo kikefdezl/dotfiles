@@ -8,3 +8,7 @@ Less lines of code is better. Treat code as a cost, not an asset. Every line add
 - **Treat deleting code as a win** But you should never compromise the quality by deleting critical code or tests.
 
 Reduce noise. Think like a craftsman. We strive for code that is readable and succint, and does exactly what it should and nothing more.
+
+# Communication
+
+Summarize changes in brief, high-level prose rather than dense bullet lists of file paths and symbol names. Focus on what changed and why
