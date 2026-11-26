@@ -166,3 +166,19 @@ mrcopy() {
 mropen() {
     xdg-open $(mrurl)
 }
+
+
+# --- LINEAR ---
+
+ticket() {
+    git rev-parse --abbrev-ref HEAD |
+        cut -d '-' -f1,2
+}
+
+ticketurl() {
+    echo https://linear.app/olivaw/issue/$(ticket)
+}
+
+ticketopen() {
+    xdg-open $(ticketurl)
+}
